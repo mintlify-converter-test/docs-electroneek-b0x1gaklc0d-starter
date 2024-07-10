@@ -1,0 +1,48 @@
+---
+title: "Debugging"
+description: "How to debug your workflow in Studio Pro."
+---
+# Overview
+
+Debugging is a stage of development in which errors can be **detected, localized, and eliminated**. Studio Pro has its own debugger that you can use to monitor the workflow execution, stop and restart it. It is very useful when you want to find out exactly at what stage of your workflow eventual errors occur. After the issue is localized, you can understand the reasons for it and solve it.
+
+# Working in Debug Mode
+
+You find the **Run in Debug Mode** option in _Menu → Debug_.
+
+<img className="block" src="images/files_readme_io/_ae602b1_image.png" alt="" />
+
+Here's what the options allow you to do:
+
+*   **Resume** — continue executing the algorithm in debug mode until the next breakpoint. If there are no more breakpoints, the algorithm will be executed to the end and the bot in debug mode will stop.
+*   **Step over** — execute a step over.
+*   **Step into** — execute a step into.
+*   **Step out** — execute a step out.
+*   **Stop** — stop the execution of the algorithm in debug mode. In this case no further actions will be performed.(explain breakpoints).
+
+# Using breakpoints
+
+To be able to check the workflow status at specific stages of execution, you need to define them as **breakpoints**. Do that by putting the cursor on the desired input port of the desired activity and click the left mouse button.
+
+<img className="block" src="images/files_readme_io/_51a739f_image.png" alt="" /> <img className="block" src="images/files_readme_io/_7aae63a_image.png" alt="" /> <img className="block" src="images/files_readme_io/_d1ca36c_image.png" alt="" />
+
+Once you set at least 1 breakpoint, the "Run in debug mode" option appears on the top toolbar too.
+
+<img className="block" src="images/files_readme_io/_b5112ca_image.png" alt="" />
+
+Now, if you want to understand this process better, take a look at this example.
+
+# Debugging example
+
+Suppose that you have a workflow with several blocks, and among them you have two "Console log" activities to display messages to users at specific stages of execution. An example of how to use the Debug mode would be adding breakpoints to these two activities.
+
+In this case, we could run the workflow in debug mode and watch it stop in the first breakpoint. For each activity, we can check if the console displays the message accordingly.
+
+<Info>
+
+## Note
+
+This functionality is very useful when a specific variable changes its value several times during the execution, for example. By using debug mode, you can check the specific value at a specific stage of the workflow — and adjust some settings to make the bot work correctly, if necessary.
+
+</Info>
+
