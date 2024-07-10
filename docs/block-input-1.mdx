@@ -1,0 +1,78 @@
+---
+title: "Block input"
+description: "Studio Pro activities > General > Block Input. Includes \"Block input\" and \"Unblock input\"."
+---
+# Activities
+
+| [**Block input**](/docs/block-input-1#block-input) | [**Unblock input**](/docs/block-input-1#unblock-input) |
+| --- | --- |
+| Disable a specific input from mouse or keyboard | Cancel the effect of "Block input" |
+
+* * *
+
+# Block input
+
+## Description
+
+This activity disables any input from keyboard or mouse during the execution of a workflow. It helps to protect the workflow execution from user interference.
+
+Block input applies depending on the position of the block in the workflow.
+
+In the following example user input will be disabled as soon as the bot is launched:
+
+<img className="block" src="images/files_readme_io/_9a976e9_image.png" alt="Note: Ctrl+U key combination enables the input again." />
+
+Note: Ctrl+U key combination enables the input again.
+
+## Parameters
+
+### Comment
+
+This parameter allows you to create an annotation to the activity. The input text will be displayed above the activity name.
+
+There are no other specific parameters for this activity. The only valuable thing is the position of the activity in the workflow.
+
+## How to use it?
+
+The **Block input** activity guarantees that the execution of the workflow will not be interrupted by the user. It is appropriate in cases where the developer needs to transfer the workflow to the production environment and execute the workflow excluding any user’s interference.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Unblock input
+
+## Description
+
+This activity cancels “Block input” and enables the user’s input.
+
+## Parameters
+
+### Comment
+
+This parameter allows you to create an annotation to the activity. The input text will be displayed above the activity name.
+
+There are no other specific parameters for this activity. The only valuable thing is the position of the activity in the workflow.
+
+## How to use it?
+
+**“Unlock input”** is the reverse of **“Block input”**.
+
+If you have the **"Block input"** activity in your workflow and at some point an input from the user is required, the “Unblock input” allows you to let the user interact where needed.
+
+Here is a typical case of implementing **“Unblock input”** in the workflow:
+
+<img className="block" src="images/files_readme_io/_32d80cd_image.png" alt="" />
+
+This workflow blocks the input as execution starts, opens the browser, then lets the user input some text, then blocks the input again to execute further steps.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
