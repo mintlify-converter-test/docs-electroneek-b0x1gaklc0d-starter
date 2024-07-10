@@ -1,0 +1,176 @@
+---
+title: "Bot Runner"
+description: "Automation Hub. Bot Runner overview."
+---
+# Overview
+
+ElectroNeek Bot Runner simplifies the launch and management of bots, enabling you to **automate** complex business processes, increase productivity, and reduce costs. With its powerful capabilities, you can efficiently handle multiple bots simultaneously, saving time and streamlining operations.
+
+Additionally, Bot Runner integrates with Orchestrator SaaS, providing **monitoring** and reporting tools that allow you to track bot performance and ensure value delivery to your clients. It empowers you to offer reliable, high-quality automation services, enhancing your clients' reputation and contributing to business growth.
+
+Bot Runner top capabilities include:
+
+*   **Remote bot execution**
+*   **Unlimited instances**
+*   **Centralized bot management**
+
+To **download Bot Runner**, go to _User Portal → Automation Hub → Bot Runner_.
+
+# Interface and Features
+
+Bot Runner allows you to trigger bots in workspaces, servers, or virtual machines. You can execute multiple Bot Runners simultaneously by adding them to multiple Windows accounts. If you need to create an additional account, refer to the tutorial or contact your system administrator.
+
+When the Bot Runner application is running, an icon is displayed in the system tray.
+
+<img className="block" src="images/files_readme_io/_093b9c3_image.png" alt="" />
+
+Right-clicking the icon opens a list of basic functions, including:
+
+*   "Settings"
+*   "Run Bot"
+*   "Open Logs"
+*   "Check for updates"
+*   "Quit"
+
+The "Settings" button provides access to Bot Runner's core functionalities, which we will cover in the following section.
+
+## Bot Runner tabs
+
+*   **Welcome**: This is the starting tab of Bot Runner. Use the "Run Bot" button to select a .neex file and execute a workflow.
+
+<img className="block" src="images/files_readme_io/_9b35e5f_image.png" alt="" />
+
+*   **Login**: In this tab, you can log in to Bot Runner using a token.
+
+<img className="block" src="images/files_readme_io/_7920321_image.png" alt="" />
+
+*   Once logged in, you can access the **License** tab to view account information, including the availability of SaaS Orchestrator and Productivity Analytics.
+
+<img className="block" src="images/files_readme_io/_b2105f6_image.png" alt="" />
+
+*   While logged in, the **Orchestrator SaaS** tab allows you to set the display name for the Bot Runner in Orchestrator and connect any bot (`.neex` file) to it.
+
+<img className="block" src="images/files_readme_io/_e3f113f_image.png" alt="" />
+
+*   **Credentials**: This tab provides information about accounts. You can add new accounts, manage existing ones, or delete them. Refer to the relevant article for more details on working with credentials.
+
+<img className="block" src="images/files_readme_io/_dca89dc_image.png" alt="" />
+
+*   **Services**: If you want to log in to third-party platforms for your bots to interact with them, use this tab. It enables resource utilization, such as Google Sheets, Microsoft Office 365, or ABBYY OCR.
+
+<img className="block" src="images/files_readme_io/_4a1dbb7_image.png" alt="" />
+
+*   **Proxy**: In this tab, you can enable the use of a proxy server and specify its address. For more information on working with proxies, refer to the associated article.
+
+<img className="block" src="images/files_readme_io/_b892bb4_image.png" alt="" />
+
+*   **Certificates**: Here you can enable or disable E-mail or HTTPS certificate verification. Disabling these resources may reduce network security, so consult with your system administrator if it might have any negative consequences in your case. The option for **Client certificates** is also available, which may be necessary for sending HTTP requests requiring user authentication.
+
+<img className="block" src="images/files_readme_io/_8109597_image.png" alt="" />
+
+*   **Execution**: Access this tab to activate logging for each bot run. Further details on logs can be found in the corresponding article. The **Status display** option allows you to customize the amount of information shown in the bot execution status window.
+
+<img className="block" src="images/files_readme_io/_4952314_image.png" alt="" />
+
+The complete status window appears as follows:
+
+<img className="block" src="images/files_readme_io/_78def33_image.png" alt="" />
+
+*   Finally, the **Interface** tab allows you to choose between a Light or Dark theme that suits your preference.
+
+<img className="block" src="images/files_readme_io/_03df64f_image.png" alt="" />
+
+# RDP Connection
+
+Bot Runner supports maintaining an active RDP session. You can manage this functionality from Orchestrator SaaS. For more information about RDP.
+
+# System Requirements
+
+<Warning>
+
+## Note
+
+To ensure optimal performance in production automation tasks using Bot Runner, we **strongly recommend** meeting the **recommended system requirements**.
+
+</Warning>
+
+## Recommended System Requirements
+
+*   Operating System: Windows 10 or 11; Windows Server 2019 or 2022;
+    *   user account must not be a guest account
+    *   local admin rights required
+*   CPU: Dual-Core 1.8 GHz
+*   System type: 64-bit
+*   RAM: 8 GB
+*   Available disc space: 5 GB
+*   Minimum internet connection speed: 512 KB/s
+*   Maximum ping to electroneek.com: 15 ms
+*   [.NET Framework v4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+     installed.
+
+<Warning>
+
+## Tip
+
+If the ping command doesn’t work, we recommend using the curl request command such as:  
+`curl -o /dev/null -s -w "\nTime Connect: %{timeconnect};\nTime Start Transfer: %{timestarttransfer}; \nTime Total: %{time_total}\n" https://electroneek.com`
+
+</Warning>
+
+## Minimum System Requirements
+
+*   **Operating System**: Windows 10 or 11; Windows Server 2019 or 2022;
+    *   user account must not be a guest account
+    *   local admin rights required (local rights are required to install the platform and work with files that require such access).
+*   CPU: 1.4 GHz
+*   System type: 64-bit
+*   RAM: 8 GB
+*   Available disc space: 5 GB
+*   Minimum internet connection speed: 256 KB/s
+*   Maximum ping to electroneek.com: 100 ms
+*   [.NET Framework v4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+     installed.
+
+<Info>
+
+## If you are using Windows 8 OS, you need to install .NET Framework version 4.6 or higher.
+
+</Info>
+
+## Network requirements
+
+In order to use the ElectroNeek platform on your computer, you need to allow Studio and Bot Runner to communicate within the 5000-5005 port range (localhost).
+
+You should also allow ElectroNeek to the following URLs at port TCP 443:
+
+*   .electroneek.com/ - This is required for the ElectroNeek products to operate;
+*   .googleapis.com/ - This is required for the Google Sheets activities to function;
+
+The following domains are for the authentication using a Google account for Google-related activities.
+
+*   [https://accounts.google.com/](https://accounts.google.com/)
+    
+*   .googleusercontent.com/
+*   .googleapis.com/
+*   .google-analytics.com/
+*   .dns.google/
+
+The following domains are for updating tools and features.
+
+*   .grafana.net/
+*   .mixpanel.com/
+*   .unpkg.com/
+*   .github.com/
+*   cdn.mouseflow.com.cdn.cloudflare.net/
+
+Please get in touch with your network administrator for more information.
+
+<Info>
+
+## Note
+
+The `{region}` variable is different for every region. If you need to use one of these URLs, just substitute your organization's region. You can find it in the URL after authorization on the [User Portal](https://na.electroneek.com/account/home)
+. For example, `https://na.electroneek.com/account/home` where the region is `na`.
+
+</Info>
+
