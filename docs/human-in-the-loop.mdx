@@ -1,0 +1,139 @@
+---
+title: "Human in the loop"
+description: "Studio Pro activities > General > Human in the loop. Includes \"User notification\", \"Select file or folder\" and \"Input dialog\"."
+---
+# Activities
+
+| [**User notification**](/docs/human-in-the-loop#user-notification) | [**Select file or folder**](/docs/human-in-the-loop#select-file-or-folder) | [**Input dialog**](/docs/human-in-the-loop#input-dialog) |
+| --- | --- | --- |
+| Set up a pop-up window with a custom message | Ask users for a path to access a file or folder | Allow users to add text to a variable via dialog window or to add a preset message |
+
+* * *
+
+# User notification
+
+## Description
+
+This activity displays a window with a custom text message.
+
+## Parameters
+
+The main parameter of this activity is **Description message**. It defines the text that will be shown in the notification window. It isrequired.
+
+<img className="block" src="images/files_readme_io/_79ffc9c_image.png" alt="Setting up the notification text" />
+
+Setting up the notification text
+
+The other parameters are **Close after, sec** and **Button name**. These are optional.
+
+*   **Close after, sec** parameter makes it possible to automatically close the notification window after a specified amount of time. The user can also close the window manually. If you do not want the window to close automatically, leave this parameter untouched.
+*   **Button name** parameter lets you set a custom text on the close button. The default text is OK. It will be used if the parameter is not filled.
+
+<img className="block" src="images/files_readme_io/_2e71f96_image.png" alt="Close after, sec and Button name parameters" />
+
+Close after, sec and Button name parameters
+
+## Result
+
+In this example we have filled the parameters as shown in the images above. The window will be closed automatically in 30 seconds after it appeared. It can also be closed by clicking the **Got it** button.
+
+<img className="block" src="images/files_readme_io/_c414445_image.png" alt="Notification window" />
+
+Notification window
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Select file or folder
+
+## Description
+
+Asks user for a path to a file/folder during the workflow execution.
+
+## Parameters
+
+### What to select
+
+Choose what to select: file or folder.
+
+### Number of files/folders to select
+
+Choose whether it be single file/folder or multiple files/folder.
+
+### File explorer filter
+
+Set a restriction of file selection. I.e. you can allow user to select only JPG files.
+
+## Usage Examples
+
+This activity can be used in attended bots to specify files or folders that should be processed by a bot.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Input dialog
+
+## Description
+
+Opens an input dialog to allow the user input a text or select a radio button. The 'Save value to variable' activity appears automatically. It saves the user input to a variable. However, the activity is not mandatory to use and can be removed from the workflow.
+
+## Parameters
+
+### Input type
+
+Select an input type: text or radio buttons.
+
+### Text
+
+### Description message
+
+1.  **Set a value**: write a description that will be displayed in the input dialog box, for example: `Enter the company name`.
+2.  **Save the previous step result**: take the previous activity result as a message.
+3.  **Calculate a value**: use JS to form a message.
+
+### Title
+
+Set title of the popup window.
+
+### Radio buttons
+
+### Description message
+
+1.  **Set a value**: write a description that will be displayed in the input dialog box, for example: `Enter the company name`.
+2.  **Save the previous step result**: take the previous activity result as a message.
+3.  **Calculate a value**: use JS to form a message.
+
+### Radio buttons
+
+Set names for radio buttons or add new ones.
+
+<img className="block" src="images/files_readme_io/_6410fbd_image.png" alt="" />
+
+### Title
+
+Set title of the popup window.
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+## Result
+
+The input data is stored in the `input_dialog` variable by default. This variable represents a string that contains data entered by the user. If the **radio buttons** input type is chosen, then selected buttons name is saved in the variable.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
