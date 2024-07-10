@@ -1,0 +1,149 @@
+---
+title: "Processes"
+---
+# Overview
+
+Build any workflow for your processes by simply adding Stages.
+
+By Combining different Stages you can model your process and improve efficiency by delegating activities to AI Automated Agents.
+
+Start by building your current process and then optimize the process by replacing stages with AI Automated Agents.
+
+Process is an easy-to-use process builder that enables users to create processes without the complexity of mainstream BPM tools.
+
+Build a customized workflow for your operations by integrating multiple stages. Utilize this modular approach to represent your current processes.
+
+Begin by mapping out your existing processes using the designated stages. Subsequently, optimize these processes by strategically substituting certain stages with AI Automated Agents, streamlining operations and improving productivity.
+
+The available Stages are:
+
+*   **Form**  
+    Use this stage for Humans. Build forms to request information, notify, or seek for approvals.
+*   **RPA Bot**  
+    Automate any process by using pre-built AI Automation bots.
+*   **Logic**  
+    Control the flow of the process by testing the value of a variable.
+
+  
+<img className="block" src="images/files_readme_io/_9fc5a11_PH_Processes.gif" alt="Alt text" />
+
+# Getting Started
+
+  
+
+## Who can create Processes?
+
+Users with the Admin or Process Manager role in Process Hub are entitled to create or edit Forms.
+
+## Create a New Process
+
+  
+
+1.  To create a Process, go to the Process section in Process Hub and click the “New Process” button.
+
+CREATE New Process ANIMATED GIF
+
+2.  Provide a Name, a Description and specify which group (Security Group) is allowed to see and execute the Process.
+3.  Leave the status in Draft until the Process is completed.
+4.  Click “Save”.
+5.  Start adding stages. Expand the newly created process and click “Add Stage”. There is no limit on the number of stages that can be added to a process.
+
+  
+<img className="block" src="images/files_readme_io/_75b25c9_PH_Processes_NewProcess.gif" alt="Alt text" />
+
+# Stages
+
+  
+
+## Form Stage
+
+Use this stage for Humans. Build forms to request information, notify, or seek approvals.
+
+Configure a Form Stage as follows:
+
+1.  Use the From builder to create a Form for this stage.
+2.  Add a new stage.
+3.  Provide a stage name and a description
+4.  Select the type: Form
+5.  Select the Form from the list.
+6.  Set a Responsible user for this stage. The form can be assigned to the process launcher or another user with access to Process Hub.
+
+  
+<img className="block" src="images/files_readme_io/_9db617f_PH___Processes___New_Stage.gif" alt="Alt text" />
+
+## RPA Bot Stage
+
+Automate any process by using pre-built AI Automation bots.
+
+Configure an RPA bot Stage as follows:
+
+1.  Build an RPA bot with ElectroNeek Studio Pro and publish it to the Orchestrator.
+2.  Add a new stage.
+3.  Provide a stage name and a description.
+4.  Select the type: RPA bot.
+5.  Select the Orchestrator where the workflow(bot) was published.
+6.  Select the Workflow
+7.  Select the Bot Runner that will be used to execute the automation bot.
+
+If the bot requires data to be injected into the Bot or if the Bot is expected to return values, you must configure the variables in the “Data” tab.
+
+8.  Open the “Data” tab and provide the input variables or constants required for the bot.
+
+**IMPORTANT**: The variable name is the one the bot will use to get the value.
+
+9.  Specify the name of the variables the RPA Bot will return after the execution. You just need to declare the names of the variables as they were named in the RPA bot.
+10.  The output variables can then be used in other stages of the process.
+
+## \->Example of how to send data to an RPA bot
+
+In the RPA Bot stage, we have configured a Variable and a Constant to be sent to the Bot:
+
+  
+<img className="block" src="images/files_readme_io/_8db01c5_Processes__Data_tab_input.jpg" alt="Alt text" />
+
+In the RPA Bot, we’ll read those values (in Studio Pro) using the following workflow activities:
+
+  
+<img className="block" src="images/files_readme_io/_e39b941_Processes__Studio_Pro_input.jpg" alt="Alt text" />
+
+The parameters are received in the “**webhook\_data**” internal variable as a JSON object.
+
+For this case it would be:
+
+`{ “TopicArticle” : value, “Environment” : “Production” }`
+
+## \->Example of how to receive data from an RPA bot
+
+In the RPA Bot stage, we have configured two output Variables that the stage expects to receive from the selected RPA Bot:
+
+  
+<img className="block" src="images/files_readme_io/_b13de16_Processes__Data_tab_output.jpg" alt="Alt text" />
+
+In the RPA Bot, we’ll send variable configuring the output variables in Studio Pro as follows:
+
+<img className="block" src="images/files_readme_io/_4cdcd45_Processes__Studio_Pro_output_1.jpg" alt="Alt text" />
+
+**IMPORTANT**: Be sure to select the options “**Is Global**” and “**Output Data**” in the “**Assign value to variable**”
+
+In the “**Output**” tab of ElectroNeek Studio Pro, select the options as shown below:
+
+  
+<img className="block" src="images/files_readme_io/_67fa20c_Processes__Studio_Pro_output_2.jpg" alt="Alt text" />
+
+## Logic Stage
+
+Control the flow of the process by testing the value of a variable.
+
+Configure a Logic Stage as follows:
+
+1.  Add a new stage.
+2.  Provide a stage name and a description.
+3.  Select the type: Logic.
+4.  Select the Variable that will be tested.
+5.  Provide the expected value considered as a Success. If the variable is equal to this value the next stage in the process will be executed.
+6.  Provide the expected value considered as a Failure. If the variable is equal to this value the process will end.
+7.  Provide the expected value considered as Jump to. If the variable is equal to this value the process will go to the specified stage.
+
+  
+<img className="block" src="images/files_readme_io/_dae0d02_Processes__Logic.jpg" alt="Alt text" />
+
