@@ -1,0 +1,700 @@
+---
+title: "File&Folders"
+description: "Studio Pro activities > OS Automation > File&Folders. Includes \"Read text file\", \"Append to file\", \"Copy file\" and more."
+---
+# Activities
+
+| [**Read text file**](/docs/filefolders#read-text-file) | [**Append to file**](/docs/filefolders#append-to-file) | [**Copy file**](/docs/filefolders#copy-file) | [**Create file**](/docs/filefolders#create-file) |
+| --- | --- | --- | --- |
+| Add block to read a text file | Insert text to a specific file | Copy a file from a directory | Create a new file in a specific directory |
+| [**Delete file**](/docs/filefolders#delete-file) | [**File found?**](/docs/filefolders#file-found) | [**File information**](/docs/filefolders#file-information) | [**Move file**](/docs/filefolders#move-file) |
+| Select a specific file to be deleted | Set the bot to perform an action in case a specific file exists | Extract information from a file | Move a file to a specific directory |
+| [**Overwrite file**](/docs/filefolders#overwrite-file) | [**List directory files**](/docs/filefolders#list-directory-files) | [**Create directory**](/docs/filefolders#create-directory) | [**Zip files**](/docs/filefolders#zip-files) |
+| Delete content from a file and write a new text to it | Extract names of all files from a directory and stores them in an array | Create a folder in a specific directory | Compress a file or folder and add it to an archive |
+| [**Unzip files**](/docs/filefolders#unzip-files) | [**File trigger**](/docs/filefolders#file-trigger) |     |     |
+| Extract files from a compacted archive | Monitor a folder to execute an action in case a specific file appears |     |     |
+
+* * *
+
+# Read text file
+
+## Description
+
+This activity is used to read the content of a text file.
+
+Similar to other activities related to reading files, an 'Assign value to variable' action block connected to this block will also appear upon adding this block to the workflow. This variable will store the contents of the read file.
+
+However, using the 'Assign value to variable' activity is not strictly necessary in this case. It is safe to delete this block and handle the result any other way. For example, if you want to send the content of the text file in an email 'as is', i.e. without changing the content in any way then you could use the 'Send email' activity right after 'Read text file' and specify the **Save the previous step result** option in the **Body** parameter.
+
+## Parameters
+
+This activity has three parameters: File type, Path (required), and Encoding.
+
+Speaking of File type, there are two options. You can either choose any common text tile format such as .txt, .log, .ini, and others or JSON format.
+
+<img className="block" src="images/files_readme_io/_ea10d44_image.png" alt="File type parameter" />
+
+File type parameter
+
+If the `JSON` option is selected, the output of this will be a variable of object type (JavaScript). This means that you can easily address the keys and values, for example, `file_content[“name”]`.
+
+The **Path** parameter lets you define the location of the file you are going to read. As usual, it can be set manually, dynamically, or by saving the previous step result. Also, you can specify the needed file using Explorer by clicking the **Pick** button.
+
+<img className="block" src="images/files_readme_io/_17f12c4_image.png" alt="Path parameter" />
+
+Path parameter
+
+### Encoding
+
+This parameter allows you to specify the encoding. Here's a full list of the supported ones:  
+`437`, `737`, `775`, `850`, `852`, `855`, `856`, `857`, `858`, `860`, `861`, `862`, `863`, `864`, `865`, `866`, `869`, `874`, `922`, `1046`, `1124`, `1125`, `1129`, `1133`, `1161`, `1162`, `1163`, `1250`, `1251`, `1252`, `1253`, `1254`, `1255`, `1256`, `1257`, `1258`, `28591`, `28592`, `28593`, `28594`, `28595`, `28596`, `28597`, `28598`, `28599`, `28600`, `28601`, `28603`, `28604`, `28605`, `28606`, `maccroatian`, `maccyrillic`, `macgreek`, `maciceland`, `macroman`, `macromania`, `macthai`, `macturkish`, `macukraine`, `koi8r`, `koi8u`, `koi8t`, `armscii8`, `rk1048`, `tcvn`, `georgianacademy`, `georgianps`, `pt154`, `viscii`, `iso646cn`, `iso646jp`, `hproman8`, `macintosh`, `ascii`, `tis620`, `utf7`, `utf8`, `cesu8`, `ucs2`, `utf16`, `utf16le`, `utf16be`, `binary`, `base64`, `hex`, `932`, `shiftjis`, `csshiftjis`, `mskanji`, `sjis`, `windows31j`, `ms31j`, `xsjis`, `windows932`, `ms932`, `cp932`, `936`, `cp936`, `gb2312`, `gb231280`, `gb23121980`, `csgb2312`, `csiso58gb231280`, `euccn`, `windows936`, `ms936`, `949`, `cseuckr`, `csksc56011987`, `euckr`, `isoir149`, `korean`, `ksc56011987`, `950`, `eucjp`, `gbk`, `gb18030`, `big5`.
+
+### Results
+
+Let us have a look at how the read text is represented. In this case, we used the 'Assign value to variable' action.
+
+This is the source file we used for an example.
+
+<img className="block" src="images/files_readme_io/_1977f95_image.png" alt="" />
+
+And this is how its contents are displayed in the variable.
+
+<img className="block" src="images/files_readme_io/_908ef55_image.png" alt="" />
+
+## A few notes about JSON format
+
+This is how a simple `JSON` file can look like in a variable.
+
+<img className="block" src="images/files_readme_io/_69435f4_image.png" alt="The source JSON file" />
+
+The source JSON file
+
+<img className="block" src="images/files_readme_io/_859ad77_image.png" alt="The variable with the file contents" />
+
+The variable with the file contents
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Append to file
+
+## Description
+
+Appends text to a specified file.
+
+## Parameters
+
+### Path
+
+1.  **Set a value**: enables you to directly write the desired path.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+### Text
+
+1.  **Set a value**: enables you to directly provide a text to be written to a file.
+2.  **Save the previous step result**: chooses the previous activity result as a text to write.
+3.  **Calculate a value**: enables you to use available properties and methods to form an output string.
+
+Quite often, when working with text in a written document, you need to do a line break or other operations with strings. In these cases, you can use the following characters in the **Calculate a value** field when working with text:
+
+1.  **\\n** — line feed. You can also use the `\x0D\x0A` value for line breaks in text.
+2.  **\\t** — horizontal tab.
+3.  **'** — single quote.
+4.  **"** — double quote.
+
+and so on.
+
+### Encoding
+
+This parameter allows you to specify the encoding. Here's a full list of the supported ones:  
+`437`, `737`, `775`, `850`, `852`, `855`, `856`, `857`, `858`, `860`, `861`, `862`, `863`, `864`, `865`, `866`, `869`, `874`, `922`, `1046`, `1124`, `1125`, `1129`, `1133`, `1161`, `1162`, `1163`, `1250`, `1251`, `1252`, `1253`, `1254`, `1255`, `1256`, `1257`, `1258`, `28591`, `28592`, `28593`, `28594`, `28595`, `28596`, `28597`, `28598`, `28599`, `28600`, `28601`, `28603`, `28604`, `28605`, `28606`, `maccroatian`, `maccyrillic`, `macgreek`, `maciceland`, `macroman`, `macromania`, `macthai`, `macturkish`, `macukraine`, `koi8r`, `koi8u`, `koi8t`, `armscii8`, `rk1048`, `tcvn`, `georgianacademy`, `georgianps`, `pt154`, `viscii`, `iso646cn`, `iso646jp`, `hproman8`, `macintosh`, `ascii`, `tis620`, `utf7`, `utf8`, `cesu8`, `ucs2`, `utf16`, `utf16le`, `utf16be`, `binary`, `base64`, `hex`, `932`, `shiftjis`, `csshiftjis`, `mskanji`, `sjis`, `windows31j`, `ms31j`, `xsjis`, `windows932`, `ms932`, `cp932`, `936`, `cp936`, `gb2312`, `gb231280`, `gb23121980`, `csgb2312`, `csiso58gb231280`, `euccn`, `windows936`, `ms936`, `949`, `cseuckr`, `csksc56011987`, `euckr`, `isoir149`, `korean`, `ksc56011987`, `950`, `eucjp`, `gbk`, `gb18030`, `big5`.
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+## Usage Examples
+
+This activity may be useful in creating different reports. For example, a robot is processing documents in a loop and the task is to write the corresponding processing status for each document. In this case you may use the activity where you need to set a pattern for writing the status once and then it will be writing the text to the end of the file in a loop.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Copy file
+
+## Description
+
+Copies the content of one file to another or downloads a file from the specified URL. Both HTTP and FTP protocols are supported. If you copy to a file that doesn't exist, then the robot will create a new file automatically.
+
+<Info>
+
+## Note
+
+This activity can also copy folders.
+
+</Info>
+
+## Parameters
+
+### Copy from the file
+
+1.  **Set a value**: enables you to directly write the file path or the download link. For example,
+
+*   `C:\tmp\table.xlsx`
+*   `https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png`
+*   `ftp://login:password@address`
+
+2.  **Save the previous step result**: chooses the previous activity result as a path or a link.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path or a link.
+
+### Path
+
+1.  **Set a value**: enables you to directly write the destination (including the file name and extension) where to copy or download the file. For example, `C:\\tmp\\new_folder\\new_table.xlsx`.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+### Replace existing file
+
+If this parameter is enabled and the target directory already has a file with the same name as the file you are copying, then the bot will automatically replace it. If the option is disabled, the new file won't replace the existing name and will save it with an incremental number at the end of its name.
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+## Usage Examples
+
+This activity may be your choice if you need to keep some content of a file but then make some manipulations with the content, save it and then compare. In this case, you will need to copy the content to a new file, read the new file, process the content, overwrite the new file, and then compare both files.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Create file
+
+## Description
+
+Creates a new file in the specified destination. The content of the new file can also be set.
+
+## Parameters
+
+### Path
+
+1.  **Set a value**: enables you to directly write the desired path.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+### Text
+
+1.  **Set a value**: enables you to directly provide a text to be written to a file.
+2.  **Save the previous step result**: chooses the previous activity result as a text to write.
+3.  **Calculate a value**: enables you to use available properties and methods to form an output string.
+
+Quite often, when working with text in a written document, you need to do a line break or other operations with strings. In these cases, you can use the following characters in the **Calculate a value** field when working with text:
+
+1.  `\n` — line feed. You can also use the\\x0D\\x0A value for line breaks in text.
+2.  `\t` — horizontal tab.
+3.  `\'` — single quote.
+4.  `\"` — double quote.
+
+and so on.
+
+### Encoding
+
+This parameter allows you to specify the encoding. Here's a full list of the supported ones:  
+`437`, `737`, `775`, `850`, `852`, `855`, `856`, `857`, `858`, `860`, `861`, `862`, `863`, `864`, `865`, `866`, `869`, `874`, `922`, `1046`, `1124`, `1125`, `1129`, `1133`, `1161`, `1162`, `1163`, `1250`, `1251`, `1252`, `1253`, `1254`, `1255`, `1256`, `1257`, `1258`, `28591`, `28592`, `28593`, `28594`, `28595`, `28596`, `28597`, `28598`, `28599`, `28600`, `28601`, `28603`, `28604`, `28605`, `28606`, `maccroatian`, `maccyrillic`, `macgreek`, `maciceland`, `macroman`, `macromania`, `macthai`, `macturkish`, `macukraine`, `koi8r`, `koi8u`, `koi8t`, `armscii8`, `rk1048`, `tcvn`, `georgianacademy`, `georgianps`, `pt154`, `viscii`, `iso646cn`, `iso646jp`, `hproman8`, `macintosh`, `ascii`, `tis620`, `utf7`, `utf8`, `cesu8`, `ucs2`, `utf16`, `utf16le`, `utf16be`, `binary`, `base64`, `hex`, `932`, `shiftjis`, `csshiftjis`, `mskanji`, `sjis`, `windows31j`, `ms31j`, `xsjis`, `windows932`, `ms932`, `cp932`, `936`, `cp936`, `gb2312`, `gb231280`, `gb23121980`, `csgb2312`, `csiso58gb231280`, `euccn`, `windows936`, `ms936`, `949`, `cseuckr`, `csksc56011987`, `euckr`, `isoir149`, `korean`, `ksc56011987`, `950`, `eucjp`, `gbk`, `gb18030`, `big5`.
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+## Usage Examples
+
+This activity may be used to prepare your robot for some actions. For example, you may build your logic in a way that it first creates new files which will be filled with some content afterwards.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Delete file
+
+## Description
+
+Deletes the specified file of any desired extension.
+
+## Parameters
+
+### Path
+
+1.  **Set a value**: enables you to directly write a path to the file.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+## Interaction with folders
+
+This activity can interact not only with files, but also with folders. In order to specify the folder path, you need to copy it from the file explorer and paste it manually to the parameter “Path”. Keep in mind that the “Pick” button will not allow you to pick folders.
+
+<img className="block" src="images/files_readme_io/_002fb3d_image.png" alt="" /> <img className="block" src="images/files_readme_io/_59e5e3b_image.png" alt="" />
+
+## Usage Examples
+
+This activity should be used, for example, when you need to delete files in a folder before placing new files in that folder.
+
+<Warning>
+
+## Note
+
+It is not possible to recover a file deleted using the ‘Delete file’ activity. The ‘Delete file’ activity does a permanent deletion of the file from the system. However, the deleted file can be recovered using third-party recovery software provided the concerned sector of the hardware has not been overwritten yet.
+
+</Warning><Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# File found?
+
+## Description
+
+Checks if a specific file exists in the specified directory. If the file exists, then the 'Yes' branch is executed; otherwise, the 'No' branch is executed.
+
+## Parameters
+
+### Path
+
+1.  **Set a value**: enables you to directly write a path to the file.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+### Comment
+
+A field for optional comments on the activity. The input text is displayed above the activity name on Canvas.
+
+## Interaction with folders
+
+This activity can interact with both, files and folders. To select a **file**, you can use the **"Pick"** button. To specify the **folder** path, you need to copy it from the file explorer and paste it to the parameter **"Path"**.
+
+<img className="block" src="images/files_readme_io/_aff8038_image.png" alt="" /> <img className="block" src="images/files_readme_io/_ef561fe_image.png" alt="" />
+
+## Usage examples
+
+You can use this activity in different situations.
+
+For example, if a project has a settings document for business users, then you may use this activity right at the beginning of your workflow to check the existence of that file. If it does not exist, you can register that in a log file with a corresponding message.
+
+In another scenario, you may want to register the result of your workflow. Using this activity, you can check if there is already a file created for that purpose. In this case, you open the file and add the new information. Otherwise, your workflow can trigger another activity that creates a new file.
+
+All you need to do is tell your bot how to proceed in case of YES and NO situations.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# File information
+
+## Description
+
+Extracts information about a specified file. The 'Save value to variable' activity appears automatically when choosing the 'File information' activity. It automatically saves the value to a variable. The activity is not mandatory to use and can be removed from the workflow.
+
+## Parameters
+
+### Path
+
+1.  **Set a value**: enables you to directly write the desired path.
+2.  **Save the previous step result**: chooses the previous function result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+4.  Pick: opens an explorer to select the path manually
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+## Result
+
+The received file information is stored in `file_info` variable by default. The variable represents an object with the following keys:
+
+``` 
+{
+
+ "last_write_time": "time of the last write",
+
+ "last_access_time": "time of the last access",
+
+ "creation_time": "file creation time",
+
+ "length": "file size in bytes",
+
+ "extension": "file extension",
+
+ "name": "file name with the extension"
+
+}
+
+```
+
+## Interaction with folders
+
+This activity can interact not only with files, but also with folders. In order to specify the folder path, you need to copy it from the file explorer and paste it manually to the parameter “Path”. Keep in mind that the “Pick” button will not allow you to pick folders.
+
+<img className="block" src="images/files_readme_io/_aff8038_image.png" alt="" /> <img className="block" src="images/files_readme_io/_ef561fe_image.png" alt="" />
+
+## Usage Examples
+
+This activity is useful when dealing with a huge number of files in a folder. Suppose we have a folder with files of different extensions and it is required to process files with the ".txt" extension. Then you may use this function to filter the needed files.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Move file
+
+## Description
+
+Moves a file to a specified destination.
+
+## Parameters
+
+### Path
+
+1.  **Set a value**: enables you to directly write a path of the file you need to move.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+### New file path
+
+1.  **Set a value**: enables you to directly write the path to a new file.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+<Info>
+
+## Note
+
+This activity allows you to move folders as well. In addition, it is possible to rename files and folders: to do this, you must change the name of the file/folder when specifying a new path.
+
+</Info>
+
+### Replace already existing file
+
+If the option is enabled and the target directory already has a file with the same name as the source file, then the bot will replace the already existing one. If the option is disabled, the activity will throw an error.
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+## Usage Examples
+
+This activity may be used in cases when you need to move a file having changed its name. For instance, a process requires to deal with three folders: "Queue", "Processed", "Failed". A robot takes a file from the "Queue" folder and performs some manipulations with it. In the end the file goes to either "Processed" folder or "Failed" folder. A corresponding prefix in the name can be added to better reflect the processing result.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Overwrite file
+
+## Description
+
+Overwrites a text file by deleting the old content and replacing it with new content.
+
+## Parameters
+
+### Path
+
+1.  **Set a value**: enables you to directly write the desired path.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+### Text
+
+1.  **Set a value**: enables you to directly provide a text to be written to a file.
+2.  **Save the previous step result**: chooses the previous activity result as a text to write.
+3.  **Calculate a value**: enables you to use available properties and methods to form an output string.
+
+Quite often, when working with text in a written document, you need to do a line break or other operations with strings. In these cases, you can use the following characters in the "**Calculate a value**" field when working with text:
+
+1.  `\n` — line feed. You can also use the\\x0D\\x0A value for line breaks in text.
+2.  `\t` — horizontal tab.
+3.  `\'` — single quote.
+4.  `\"` — double quote.
+
+and so on.
+
+### Encoding
+
+This parameter allows you to specify the encoding. Here's a full list of the supported ones:  
+`437`, `737`, `775`, `850`, `852`, `855`, `856`, `857`, `858`, `860`, `861`, `862`, `863`, `864`, `865`, `866`, `869`, `874`, `922`, `1046`, `1124`, `1125`, `1129`, `1133`, `1161`, `1162`, `1163`, `1250`, `1251`, `1252`, `1253`, `1254`, `1255`, `1256`, `1257`, `1258`, `28591`, `28592`, `28593`, `28594`, `28595`, `28596`, `28597`, `28598`, `28599`, `28600`, `28601`, `28603`, `28604`, `28605`, `28606`, `maccroatian`, `maccyrillic`, `macgreek`, `maciceland`, `macroman`, `macromania`, `macthai`, `macturkish`, `macukraine`, `koi8r`, `koi8u`, `koi8t`, `armscii8`, `rk1048`, `tcvn`, `georgianacademy`, `georgianps`, `pt154`, `viscii`, `iso646cn`, `iso646jp`, `hproman8`, `macintosh`, `ascii`, `tis620`, `utf7`, `utf8`, `cesu8`, `ucs2`, `utf16`, `utf16le`, `utf16be`, `binary`, `base64`, `hex`, `932`, `shiftjis`, `csshiftjis`, `mskanji`, `sjis`, `windows31j`, `ms31j`, `xsjis`, `windows932`, `ms932`, `cp932`, `936`, `cp936`, `gb2312`, `gb231280`, `gb23121980`, `csgb2312`, `csiso58gb231280`, `euccn`, `windows936`, `ms936`, `949`, `cseuckr`, `csksc56011987`, `euckr`, `isoir149`, `korean`, `ksc56011987`, `950`, `eucjp`, `gbk`, `gb18030`, `big5`.
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+## Usage Examples
+
+This activity is useful when you need to write results of some actions in your program but you don't need to keep the full history of the actions. Then you can make use of this function to renew the file content.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# List directory files
+
+## Description
+
+Extract all files' names in a directory and stores them in an array. The 'Save value to variable' activity appears automatically when choosing the 'List directory files' activity. It automatically saves the value to a variable. However, the activity is not mandatory to use and can be removed from the workflow.
+
+Below is an example of setting up and using the activity to read the names of files and folders in a directory.
+
+<img className="block" src="images/files_readme_io/_3b88849_yvbN55KwVP.gif" alt="" />
+
+## Parameters
+
+### Directory path
+
+1.  **Set a value**: enables you to directly write the desired folder path to extract files names from.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+### Return full paths to files and folders
+
+This parameter will return the full paths to files and folder (without the checkbox checked there will be only names of files returned).
+
+### Return files from subfolders
+
+With this checkbox checked there will be all the files from the subfolders returned into the variable.
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+## Result
+
+The list of files and folders is stored in the `directory_files` variable by default. This variable represents an array of strings. For example, if in the specified folder there are folders "documents", "reports" and files "scan.png", "employees.xlsx", "agreement.docx" then the output array of string will be the following: `["agreement.docx", "documents", "employees.xlsx", "reports", "scan.png"]`.
+
+## Interaction with folders
+
+This activity can interact not only with files, but also with folders. In order to specify the folder path, you need to copy it from the file explorer and paste it manually to the parameter **Path**. Keep in mind that the **Pick** button will not allow you to pick folders.
+
+<img className="block" src="images/files_readme_io/_aff8038_image.png" alt="" /> <img className="block" src="images/files_readme_io/_ef561fe_image.png" alt="" />
+
+## Usage Examples
+
+This activity is useful when you need to perform similar actions with a huge amount of files. In this case you can get all files' names in a folder and then run a loop.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Create directory
+
+## Description
+
+Creates a folder by the specified path and name.
+
+## Parameters
+
+### Directory path
+
+1.  **Set a value**: enables you to directly specify the path where a new folder is to be created.
+2.  **Save the previous step result**: chooses the previous activity result as a path.
+3.  **Calculate a value**: enables you to use available properties and methods to form a path.
+
+### Directory name
+
+1.  **Set a value**: enables you to directly specify a new folder name.
+2.  **Save the previous step result**: chooses the previous activity result as a name.
+3.  **Calculate a value**: enables you to use available properties and methods to form a name.
+
+### Comment
+
+Contains an annotation to the activity. The input text will be displayed above the activity name.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Zip files
+
+## Description
+
+Compresses the file or folder to an archive.
+
+## Interaction with folders
+
+This activity can interact not only with files, but also with folders. In order to specify the folder path, you need to copy it from the file explorer and paste it manually to the parameter “Path”. Keep in mind that the “Pick” button will not allow you to pick folders.
+
+<img className="block" src="images/files_readme_io/_aff8038_image.png" alt="" /> <img className="block" src="images/files_readme_io/_ef561fe_image.png" alt="" />
+
+## Parameters
+
+## Source
+
+Choose the source type to be archived: file or folder.
+
+## File/folder to zip
+
+1.  **Set a value**: set a path to file/folder.
+2.  **Save the previous step result**: take the previous activity result as a path.
+3.  **Calculate a value**: use JS to calculate a path.
+
+### Path to archive
+
+1.  **Set a value**: set a path to archive.
+2.  **Save the previous step result**: take the previous activity result as a path.
+3.  **Calculate a value**: use JS to calculate a path.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# Unzip files
+
+## Description
+
+Extracts files from an archive to a folder.
+
+## Parameters
+
+### Path to archive
+
+1.  **Set a value**: set a path to archieve.
+2.  **Save the previous step result**: take the previous activity result as a path.
+3.  **Calculate a value**: use JS to calculate a path.
+
+### Path to unzipped folder
+
+1.  **Set a value**: set a path to a folder.
+2.  **Save the previous step result**: take the previous activity result as a path.
+3.  **Calculate a value**: use JS to calculate a path.
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
+* * *
+
+# File trigger
+
+## Description
+
+This activity monitors the selected folder and executes other actions when a specific file appears in this folder or disappears from it. If the set event happened, then Yes branch will be executed. Otherwise, No branch will be executed.
+
+A good usage of this activity is to perform some actions with the file immediately after it appears in the folder. Here is how it can look like.
+
+<img className="block" src="images/files_readme_io/_44e86cb_image.png" alt="In this example we wait for the file to appear, write some text to it and then move it to another folder" />
+
+In this example we wait for the file to appear, write some text to it and then move it to another folder
+
+## Parameters
+
+There are two main required parameters: **Folder to monitor the event** and **Event**.
+
+**Folder to monitor the event** defines the folder where the file is expected to appear or disappear.
+
+<img className="block" src="images/files_readme_io/_fa2e5a6_image.png" alt="Folder to monitor the event parameter" />
+
+Folder to monitor the event parameter
+
+**Event** defines what exactly should happen: other action can be triggered either if the file has appeared or disappeared.
+
+<img className="block" src="images/files_readme_io/_f9db1f3_image.png" alt="Selecting the type of event" />
+
+Selecting the type of event
+
+It also includes two other options. You can set the activity to trigger if any kind of file appears in the folder, or define a specific file.
+
+Also note that **Wait for any file to appear** and **Wait for a specific file to appear** options return a complete path to the file.
+
+<img className="block" src="images/files_readme_io/_3e8504f_image.png" alt="Radio buttons in the Event parameter" />
+
+Radio buttons in the Event parameter
+
+<img className="block" src="images/files_readme_io/_9668ffa_image.png" alt="Path to the appeared file" />
+
+Path to the appeared file
+
+If you select the **Wait for a specific file to appear** option, you will be able to set a specific file name or extension. Check one of these options or both according to the task.
+
+<img className="block" src="images/files_readme_io/_d282576_image.png" alt="Here it is possible to set a specific file name" />
+
+Here it is possible to set a specific file name
+
+<img className="block" src="images/files_readme_io/_fae38e6_image.png" alt="It is also possible to set its extension" />
+
+It is also possible to set its extension
+
+If **Disappearance** event was selected, the options will look similarly. It is possible to either trigger the other actions when the folder becomes completely empty or when only a specific file disappears. It is also possible to set the name and/or extension of this file.
+
+If the **Wait for the folder to become empty** option is selected, then the activity will not return anything. If the **Wait for a specific file to disappear** option is enabled, then the activity will return the name of this file.
+
+<img className="block" src="images/files_readme_io/_719803b_image.png" alt="" />
+
+<img className="block" src="images/files_readme_io/_63679db_image.png" alt="Disappearance event options" />
+
+Disappearance event options
+
+The last option in this activity is **Stop waiting (in seconds)**. Here you can set the awaiting time for file to appear or disappear. After this time No branch will be executed.
+
+<img className="block" src="images/files_readme_io/_04c3c4a_image.png" alt="Setting the awaiting time" />
+
+Setting the awaiting time
+
+<Info>
+
+## ️Back to the top
+
+</Info>
+
