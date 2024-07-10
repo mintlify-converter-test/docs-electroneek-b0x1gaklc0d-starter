@@ -1,0 +1,303 @@
+---
+title: "Advanced Access Management feature"
+---
+## Introduction
+
+To safeguard sensitive environments, protect clients, and ensure clear separation between the Development, Testing, and Production stages, enterprise companies and service providers need enhanced control over user access to resources.
+
+Access Management feature enables:
+
+*   Segregation of environments
+    *   Production, Testing, and Development
+    *   Clients
+*   Segmentation - Ability to allow or deny access to different resources within the organization.
+
+  
+<Info>
+
+## Note
+
+This feature is not enabled by default. If you want to enable this feature, please contact your Customer Success Manager.
+
+</Info><img className="block" src="images/files_readme_io/_b2f5895_1_show_access_management.gif" alt="" />
+
+## How does Advanced Access Management work?
+
+Access and rights to the resources in the ElectroNeek platform will be given by the combination of roles, product access and grouping.
+
+The effective access for a given user will be determined by:
+
+1.  **Portal Role**. This role determines the management rights for the ElectroNeek Platform as a whole.
+2.  Selected **Products** -> This setting limits access to the different products.
+3.  **Product Role** (For Orchestrator, IntegraBots, and/or Process Hub). This role sets the permissions for the user in the corresponding product.
+4.  **Security Groups** -> This feature defines a sub-domain/group of objects that will be accessible to the users.
+
+### Portal Roles
+
+These roles determine the management rights for the ElectroNeek Platform as a whole.
+
+**Owner**: The Owner is in charge of a Team. Organizations can only have one "Owner". This role cannot be deleted but can be transferred through the team management tool within the User Portal. When the role is reassigned, the former Owner will be demoted to the Admin role.
+
+Features:
+
+*   Can invite anybody to the Team.
+*   Can modify roles for anybody.
+*   Can grant/revoke permissions for users to use any product.
+*   Can exclude/delete a member from the Team.
+*   Can create/Edit/Disable/Delete Groups.
+*   Can not be deleted by anyone on the Team.
+*   Have access to Billing
+*   Have access to Audit Logs
+
+**Admin**: This role is typically used to permit persons to manage specific products. It is mostly similar to the Owner, but an Admin is unable to transfer the Owner role to another Team user.
+
+Features:
+
+*   Can invite anybody to the Team.
+*   Can modify roles for anybody.
+*   Can grant permissions for other users to use any product.
+*   Can revoke the permissions to use the product.
+*   Can exclude a member from the Team.
+*   Have access to all Products and Objects in the Platform.
+
+**Security Admin**: This **new** role is intended for Information Security agents to manage Users, assign Roles, Groups, and monitor Audit logs.
+
+Features:
+
+*   Can invite anybody to the Team.
+*   Can modify roles for anybody (except for itself).
+*   Can grant/revoke permissions for users to use any product.
+*   Can exclude/delete a member from the Team.
+*   Can create/Edit/Disable/Delete Groups.
+*   Can monitor Audit Logs
+
+<img className="block" src="images/files_readme_io/_3eae873_7_show_SecurityAdmin.gif" alt="" />
+
+**Member**: Members can be assigned to any product but they do not have any specific rights regarding the Team.
+
+Features:
+
+*   Have access to all assigned Products
+*   Have access to all Objects of the assigned Products.
+
+**Billing Contact**: This is intended to be used by the Finance team. The users only have access to the Billing Page.
+
+### Orchestrator Roles
+
+The **Advanced Access Management** feature introduces two new roles—**Developer** and **Operator**—for more granular control over user capabilities.
+
+The **Developer** role restricts the user's activities to only the Security Groups assigned to them and prevents any configuration changes related to the Orchestrator that could impact other customers.
+
+The **Operator** role is designed for NOC operators, allowing users to monitor workflows and perform actions such as manually launching bots or modifying specified schedules.
+
+<img className="block" src="images/files_readme_io/_bcb3a28_5_show_orch_roles.gif" alt="" />  
+
+Role details:
+
+**Admin**: it provides access to all Orchestrators, Workflows, and Bot Runners. This role cannot be limited by Security Groups.
+
+Features:
+
+*   Dashboard
+    *   Can view dashboards
+*   Workflows
+    *   Can publish and schedule Workflows.
+    *   Can enable and view Workflow logs (Execution and Console)
+    *   Can view Output variables for the assigned Workflows.
+*   Bot Runner
+    *   Can create Tokens, Approve Bot Runners, configure RDP Credentials, and assign Security Groups.
+*   Integrations
+    *   Can configure API.
+    *   Can configure Zapier
+*   Settings
+    *   Can rename Orchestrator and assign Security Groups
+*   Multitenancy
+    *   Can configure the multi-tenancy feature.
+
+**Developer**: by default, this role doesn’t provide access to any Orchestrator object. Access must be provided by Security Groups.
+
+Features:
+
+*   Dashboard
+    *   Can view dashboards
+*   Workflows
+    *   Can publish and configure Workflows.
+    *   Can enable webhooks for the workflows.
+    *   Can enable and view Workflow logs (Execution and Console)
+    *   Can view Output variables for the assigned Workflows.
+    *   Can assign Bot Runners
+    *   Can view Version History, Download, and switch to previous version.
+*   Bot Runners
+    *   Can see assigned Bot Runners and configure RDP Credentials.
+*   Integrations
+    *   Can use API
+    *   Can use Zapier.
+
+**Operator**: by default, this role doesn’t provide access to any Orchestrator object. Access must be provided by Security Groups.
+
+Features:
+
+*   Dashboard
+    *   Can view dashboards
+*   Workflows:
+    *   Can view assigned Workflows
+    *   Can schedule workflows
+    *   Can view Workflow logs (Execution and Console)
+    *   Cannot view Output variables for the assigned Workflows.
+    *   Can Run workflows manually from Orchestrator
+    *   Can manage Workflow queue
+    *   Cannot view Version History.
+*   Bot Runners
+    *   Can only view Bot Runner configuration
+*   Integrations
+    *   Cannot view.
+*   Settings
+    *   Cannot view.
+*   Multitenancy
+    *   Cannot view.
+
+**Analyst**: it provides read access to all Orchestrators, Workflows, and Bot Runners. Its access can be limited by assigning Security Groups.
+
+Features:
+
+*   Dashboard
+    *   Can view dashboards
+*   Workflows:
+    *   Can view assigned Workflows
+    *   Can view schedule for workflows
+    *   Can view Workflow logs (Execution and Console)
+    *   Cannot see Output variables for the assigned Workflows.
+    *   Cannot see Version History.
+*   Bot Runners
+    *   Can only view Bot Runner configuration
+
+### Process Hub Roles
+
+**Administrator**: It provides full access to Process Hub section.
+
+Features:
+
+*   can see all Processes.
+*   can create and edit Processes.
+*   can launch any Process.
+*   can see all Jobs and their details.
+*   can control all Jobs.
+*   can access Forms.
+*   can create and edit Forms.
+*   can see all Forms.
+
+**Process Manager**: It provides access to Process Hub sections with specific predefined permissions.
+
+Features:
+
+*   can create Processes.
+*   can edit those Processes created by him.
+*   can access Forms.
+*   can create and edit Forms.
+*   can see all Forms.
+*   everything else as the User role.
+
+**User**: It provides access to Process Hub sections based on the permissions defined in each Process
+
+Features:
+
+*   can see those Processes where he has launch permission (determined when creating the process)
+*   can see those Jobs that he launched (determined when launching the process)
+*   can see and execute those Tasks assigned to him
+
+## Security Groups
+
+A Security Group is an access management entity designed to help segregate and compartmentalize access to various resources and environments. It is defined as a list of users to which different objects of the ElectroNeek platform will be associated to.
+
+The objects that can be associated to a Security Group are:
+
+*   RPA objects:
+    *   Orchestrator
+    *   Workflow
+    *   Bot Runner
+*   Process Hub:
+    *   Processes
+*   IntegraBots (Roadmap)
+    *   Flows
+    *   Connections
+
+Security Groups adhere to the following rules:
+
+*   Only one Orchestrator can be associated with a Security Group.
+*   Any number of Workflows can be associated with a Security Group.
+*   Workflows can be associated with only one Security Group.
+*   Any number of Bot Runners can be associated with a Security Group.
+*   Bot Runners can be associated with multiple Security Groups.
+*   Any number of Process Hub processes can be associated with a Security Group.
+*   Process Hub process can be associated with more than one Security Group.
+
+  
+
+## Getting Started
+
+Before the Advanced Access Management feature is enabled all Orchestrator users have access to all the resources as Admin or Analyst.
+
+Once the feature is enabled, Admin users will not experience any change, while Analyst will lose visibility of all the resources until the Security Groups are configured and assigned to the Analyst user.
+
+1.  Check if the Advanced Access Management Feature is enabled.
+
+<img className="block" src="images/files_readme_io/_be0286f_10_check_access_management.gif" alt="" />
+
+2.  Define how you want to group the resources. Some examples:
+
+*   By Area (Finance, Human Resources, etc)By End Client
+*   By environment (Production, Testing, Development)
+*   By Project or Team
+
+3.  Plan which users will be assigned to the new **Developer** or **Operator** roles.
+4.  Create the Security Groups, based on the previous definition, in **Account** --> **Team** --> **Security Groups** tab
+5.  Assign users to the different Security Groups.
+
+<Info>
+
+## Note
+
+Orchestrator Admin users aren't required to be assigned to any Security Groups as they have access to all the resources. Developers and Operators will rely on the Security Groups assigned to them to be able to see and manage resources in Orchestrator.
+
+</Info>
+
+6.  Start by assigning the **Security Groups to the Orchestrator** that they will be able to manage. Please remember that a Security Group can be assigned to only one Orchestrator.
+
+<img className="block" src="images/files_readme_io/_71f0b2b_6_show_orch_settings.gif" alt="" />
+
+7.  Assign the **Bot Runners to the Security Groups**. Bot Runners are shared resources so they can be assigned to many Security Groups
+
+<img className="block" src="images/files_readme_io/_bf577e0_3_show_botrunner_sg.gif" alt="" />
+
+8.  Assign the **Workflows to a Security Group**. A workflow can be assigned to only one Security Group.
+
+<img className="block" src="images/files_readme_io/_fc51d77_9_show_workflow_sg.gif" alt="" />
+
+9.  Assign the Bot Runner to the Workflow. Only the Bot Runners assigned to the same Security Group that the workflow belongs to will be listed.
+
+<img className="block" src="images/files_readme_io/_73ee793_8_show_workflow_br.gif" alt="" />
+
+10.  Now, you can **transition users from Admin to Developer or Operator Roles**.
+
+<img className="block" src="images/files_readme_io/_2293be6_5_show_orch_roles.gif" alt="" />
+
+## Audit Logs
+
+The Audit Logs can now be filtered by Security Groups. This new capability will allow the Owner to provide partial access to the Audit Logs to specified users.
+
+If you want to provide limited access to the Audit Logs to a user follow these steps:
+
+1- Invite the new user with the Portal **Member** role.
+
+2- Edit the user:
+
+*   Add the user to the Security Groups it is allowed.
+*   Go to "Account Options" and check **Audit Logs**
+
+<img className="block" src="images/files_readme_io/_e4fa96c_Account_Options.jpg" alt="" />
+
+3.  Save the changes
+4.  The user can now access the **Audit Logs** option under the **Account** menu and use the filter to select any specific Security Group.
+
+<img className="block" src="images/files_readme_io/_c97f02a_2_show_auditlog_filter.gif" alt="" />
+
