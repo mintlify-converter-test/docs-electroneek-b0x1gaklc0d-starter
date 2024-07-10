@@ -1,0 +1,309 @@
+---
+title: "Studio Pro"
+description: "Automation Hub. Studio Pro overview."
+---
+# Overview
+
+**Automation** has become a game-changer in today's fast-paced world, streamlining tasks, saving time, and enhancing overall efficiency. ElectroNeek Studio Pro is at the forefront of this automation revolution, harnessing the power of **Artificial Intelligence** to offer a suite of AI-powered tools accessible to everyone, from experienced developers to newcomers.
+
+ElectroNeek Studio Pro is a **no-code/low-code** development environment that empowers IT Service Providers to create bots using a visual programming approach. It features an intuitive **drag-and-drop** interface, enabling quick and easy creation of advanced automation workflows without the need for complex coding or development work.
+
+By utilizing Studio Pro, you can **save time and money** while enhancing accuracy and productivity. Its automation capabilities also enable IT Service Providers to **scale** their operations and expand the range of services offered to clients, leading to potential revenue growth and business expansion.
+
+<img className="block" src="images/files_readme_io/_8b0be86_workflow_generator.gif" alt="" />
+
+## Studio Pro Top Capabilities
+
+*   **AI Workflow Generator**
+*   **AI Code Generator**
+*   **AI Activities**
+*   **Visual Process Designer**
+*   **Web Automation**
+*   **Desktop Automation**
+*   **IntelliDocs and other OCRs (Optical Character Recognition)**
+*   **Debugging and Testing**
+*   **Excel data processing**
+
+In summary, Studio Pro offers a powerful automation tool that simplifies your processes, allows for business scalability, and enables the delivery of high-quality services to clients.
+
+To **download Studio Pro**, go to _User Portal → Automation Hub → Studio Pro_.
+
+<img className="block" src="images/files_readme_io/_a7b66fe_studio_pro_download.gif" alt="" />
+
+# Introduction
+
+When you create a bot in Studio Pro, you start by creating a project. In a logical sense, the project contains all the files that can be compiled into an executable bot. Those files can include workflow, images, data files, and so on. By default, your project also has a configuration file that contains platform settings (browser settings, etc.) and user-defined settings (variables, etc.).
+
+## Create project
+
+In order to create a New Project, you need to click on the **"Create project"** button as shown below:
+
+<img className="block" src="images/files_readme_io/_797dc0f_image.png" alt="" />
+
+After you have clicked on the button, a window will appear with the following parameters:
+
+1.  **Name:** the name of your project, you can choose any name.
+2.  **Location:** the location of the new project on your computer.
+3.  **Main file name:** the name of your main file in the `.neek` format.
+
+<img className="block" src="images/files_readme_io/_ebe6e66_image.png" alt="" />
+
+## Open project
+
+In order to open the existing project, you need to click on the **"Open project"** button as shown below:
+
+<img className="block" src="images/files_readme_io/_528abf4_image.png" alt="" />
+
+After you have clicked on the button, you should specify your project folder on your computer and click the "Select folder" button as follows:
+
+<img className="block" src="images/files_readme_io/_422ad2d_image.png" alt="" /><Info>
+
+## Note
+
+Double-clicking on the main `.neek` file will not open the project, but the workflow contained in this file.
+
+</Info>
+
+## Playground
+
+There is a special mode in Studio Pro, which you can see on the start screen:
+
+<img className="block" src="images/files_readme_io/_debded8_image.png" alt="" />
+
+This mode can help you when you would like to quickly check the functionality of all activities or even implement a bot. Also, you can save your bot to a single `.neek` file. However, you cannot use the configuration file, convert to your bot to the`.neex` format, and upload it to Orchestrator SaaS.
+
+# Project structure tree
+
+In Studio Pro, your project is organized in a hierarchy of subfolders — a project tree. The highest folder of your project is the project folder itself. By default, the tree structure is subdivided into eight parts:
+
+1.  **elements** — this subfolder contains activities that interact with desktop elements.
+2.  **execute\_js\_code\_scripts** — this subfolder contains the JS scripts used by your bot.
+3.  **screenshots** — this subfolder contains activities that interact with images.
+4.  **logs** — this subfolder contains logs. You can learn more about logs in this article.
+5.  **termelements** — this subfolder contains activities that interact with terminal elements.
+6.  **webelements** — this subfolder contains activities that interact with web-elements.
+7.  **main.neek** — this executable file is the entry point of the bot, you can choose it yourself.
+8.  **project.json** — this is a project configuration file.
+
+<img className="block" src="images/files_readme_io/_601298a_image.png" alt="" />
+
+You can add folders or`.neek` files, and rename `.neek` files using the context menu if you right-click in the **Project** tab.
+
+<img className="block" src="images/files_readme_io/_5845942_2023_12_22_10_38_52_transformed.png" alt="" />
+
+Also, you can drag-and-drop files and folders.
+
+<img className="block" src="images/files_readme_io/_23f7dfb_2023_12_22_10_39_13_transformed.png" alt="" />
+
+# Interface and features
+
+Let's begin by examining the program interface.
+
+<img className="block" src="images/files_readme_io/_afb9441_interfazStudioPro.gif" alt="" />
+
+<Info>
+
+## Note
+
+Studio Pro's interface is currently available in English, Spanish, German, French and Portuguese.
+
+<img className="block" src="images/files_readme_io/_d2ae33f_2023_12_22_10_39_44_transformed.png" alt="" /></Info>
+
+First of all, let us have a look at the program interface in general and then we will move to the breakdown of its main parts.
+
+The key sections are as follows:
+
+*   **Toolbar** and **control buttons** (located in the top left corner)
+*   **Activities** and **elements** list (positioned to the left)
+*   **Canvas** (the large workspace in the middle)
+*   **Activities**, **properties**, **variables** and **output data** sections (situated on the right)
+*   **Console** with its control elements (located below the canvas)
+
+## Toolbar and Control Buttons
+
+This section enables users to manage files and access various features and settings. Let's examine its elements more closely.
+
+### Buttons
+
+Here you find the following options:
+
+<img className="block" src="images/files_readme_io/_de9f30b_2023_12_22_10_40_10_transformed.png" alt="Toolbar and control buttons" />
+
+Toolbar and control buttons
+
+1.  **New workflow** - creates a new empty workflow.
+2.  **Open File** \- Opens a specific file (.neek).
+3.  **Open Project** \- Opens a specified project.
+4.  **Save** - Saves the current workflow, overwriting the previous one if applicable. If used with a newly created file, it triggers "Save as" instead.
+5.  **Save as** - Provides options for saving the workflow. You can overwrite the existing file, save changes as a new project, or choose a different save location.
+6.  **Publish to Orchestrator SaaS** \- Uploads the current workflow to Orchestrator SaaS. Refer to Orchestrator Admin Guide and Orchestrator SaaS Overview for more information.
+7.  **ElectroNeek Code Generator** \- an artificial intelligence automatic code creator. This allows you to freely provide the instructions and an optional starting point input data to the Artificial Intelligence.
+8.  **Run** \- Launches the bot in normal or debug mode.
+9.  **UI scale** - Adjusts the interface scale.
+10.  **Undo/Redo** \- Reverses or repeats the last change.
+11.  **Process Recorder** \- Records actions performed in a desktop or browser activity and saves them as an algorithm for implementation in the workflow.
+12.  **Auto layout** - Automatically aligns activity blocks on the canvas.
+13.  **Grid drops**\- Displays grid drops on the canvas.
+
+## Menu items
+
+<img className="block" src="images/files_readme_io/_8026912_2023_12_22_10_46_28_F2I95msbb_transformed.png" alt="" />
+
+*   The **File** menu allows you to create, save, and open workflow files, export your workflow to .neex format for Bot Runner, publish your bot to Orchestrator SaaS, and import elements from .elm files.
+*   The **Edit** menu facilitates block management on the canvas, including actions such as undo/redo, copy/paste/delete blocks, and finding, selecting, and removing unconnected blocks.
+*   The **Run** menu is used to run the bot in normal or debug mode and manage debug options.
+*   The **Debug** menu provides access to the [debug mode](/docs/debugging)
+    .
+*   In the **Tools** menu, you can access the Process Recorder and open the logs folder.
+*   The **Settings** menu offers various options related to workflow execution, browsers, connections, specific actions, and more.
+*   The **Account** menu allows you to check your license details and log out of your current account.
+*   The **Help** menu provides access to the Help Center, checking for updates\*, and contacting technical support.
+
+<Info>
+
+## Note
+
+To check for updates, go to _'Help → Check for updates'_. You will see a pop-up window with your current version of Studio Pro and the available one. If the available version is higher than yours, press "Install" to update Studio Pro.
+
+<img className="block" src="images/files_readme_io/_fd08d7c_2023_12_22_10_40_27_transformed.png" alt="" /></Info>
+
+## Activities and elements list
+
+This section encompasses all the available activities (under the **Activities** tab) and user-developed elements (under the **Elements** tab).
+
+Activities are organized into groups based on their functions. Clicking on a group name expands a drop-down list that displays the related activities.
+
+<img className="block" src="images/files_readme_io/_cfaeffe_2023_12_22_10_40_35_transformed.png" alt="" />
+
+## Canvas
+
+The canvas is a crucial component of Studio Pro as it visualizes the workflow development and contains your current algorithm. It serves as the workspace where you construct your bot.
+
+New activity blocks added to your workflow are displayed on the canvas. It features tabs that allow you to switch between opened workflows and a search window. For more information, refer to Workflow Composition.
+
+<img className="block" src="images/files_readme_io/_6379bfe_interfazStudioPro.gif" alt="" /><Info>
+
+## Note
+
+You can right-click on any activity and use the copy, cut, and delete options from the menu. If you right-click on the canvas you can select the paste option to add the already cut and copied activities.
+
+</Info>
+
+## Properties and Variables Tabs
+
+This section allows you to configure activity parameters and manage variables created during development. The tabs change based on the selected activity block.
+
+The **Properties** tab offers a range of options specific to the selected block. The **Variables** tab stores user-created variables for use in the workflow. The **Output** tab enables you to manage data collected from your workflow.
+
+<img className="block" src="images/files_readme_io/_ab85cec_image.png" alt="In the screenshot, you can observe properties related to browser-related blocks. The available options vary depending on the selected block's nature." />
+
+In the screenshot, you can observe properties related to browser-related blocks. The available options vary depending on the selected block's nature.
+
+## Console
+
+The Console stores various types of output messages and can be used with certain activities. It also includes control buttons for clearing the console, changing its position, and opening the logs folder.
+
+<img className="block" src="images/files_readme_io/_6577084_image.png" alt="Console window with examples of different types of messages" />
+
+Console window with examples of different types of messages
+
+The colored titles and specific messages help improve your workflow. Here's what they mean:
+
+*   **Red icon** \- Error message (Workflow logic errors + Infrastructure errors)
+*   **Yellow icon** \- Warning messages
+*   **Green icon** \- Information messages
+
+<Info>
+
+## Note
+
+**Workflow** logic errors refer to unexpected behavior within the workflow structure/elements.
+
+**Infrastructure** errors pertain to phenomena independent of workflow execution, such as corrupted files, third-party service issues, extension problems, etc.
+
+</Info>
+
+The "Refresh" option next to the colored icons allows you to reset the counter. Clicking it turns all messages in the expanded console gray. The same occurs when running a new workflow. This makes it easy to identify messages from the last executed workflow, as they are highlighted with colors.
+
+By clicking on the "Settings" icon, a menu appears with the following options:
+
+*   **Open Log Folder** \- Takes you to the log folder.
+*   **Maximize All** \- Expands all messages in the console.
+*   **Minimize All** \- Collapses all messages in the console.
+*   **Error** \- If checked, the console displays error messages.
+*   **Warning** \- If checked, the console displays warning messages.
+*   **Info** \- If checked, the console displays information messages.
+
+Clicking the square icon expands the console, allowing you to view detailed messages and utilize the search bar to find specific words in the message history.
+
+These are the main features of the Studio Pro interface. Now, let's provide an overview of the system requirements for using this tool on your machines.
+
+# System Requirements
+
+<Warning>
+
+## Note
+
+To ensure optimal performance in production automation tasks using Studio Pro, we **strongly recommend** meeting the **recommended system requirements**.
+
+</Warning>
+
+## Recommended System Requirements
+
+*   Operating System: Windows 10 or 11; Windows Server 2019 or 2022;
+    *   user account must not be a guest account
+    *   local admin rights required
+*   CPU: Dual-Core 1.8 GHz
+*   System type: 64-bit
+*   RAM: 8 GB
+*   Available disc space: 5 GB
+*   Minimum internet connection speed: 512 KB/s
+*   Maximum ping to electroneek.com: 15 ms
+*   [.NET Framework v4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+     installed.
+
+<Warning>
+
+## Tip
+
+If the ping command doesn’t work, we recommend using the curl request command such as:  
+`curl -o /dev/null -s -w "\nTime Connect: %{timeconnect};\nTime Start Transfer: %{timestarttransfer}; \nTime Total: %{time_total}\n" https://electroneek.com`
+
+</Warning>
+
+## Minimum System Requirements
+
+*   **Operating System**: Windows 10 or 11; Windows Server 2019 or 2022;
+    *   user account must not be a guest account
+    *   local admin rights required (local rights are required to install the platform and work with files that require such access).
+*   CPU: 1.4 GHz
+*   System type: 64-bit
+*   RAM: 8 GB
+*   Available disc space: 5 GB
+*   Minimum internet connection speed: 256 KB/s
+*   Maximum ping to electroneek.com: 100 ms
+*   [.NET Framework v4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+     installed.
+
+<Info>
+
+## Note
+
+If you are using Windows 8 OS, you need to install .NET Framework version 4.6 or higher.
+
+</Info>
+
+## Network requirements
+
+In order to use the ElectroNeek platform on your computer, you need to allow Studio and Bot Runner to communicate within the 5000-5005 port range (localhost).
+
+You should also allow ElectroNeek to the following URLs at port TCP 443:
+
+*   .electroneek.com/ - This is required for the ElectroNeek products to operate;
+*   [https://sheets.googleapis.com/](https://sheets.googleapis.com/)
+     - This is required for the Google Sheets activities to function;
+*   [https://accounts.google.com](https://accounts.google.com)
+     - This is required to authenticate the Google account for Google-related activities.
+
+Please get in touch with your network administrator for more information.
+
