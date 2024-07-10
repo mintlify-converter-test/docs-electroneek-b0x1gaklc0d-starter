@@ -1,0 +1,4381 @@
+---
+title: "Integrations"
+---
+# Activebots
+
+## Actions
+
+### Ask Bot
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Chatbots | Dropdown | Required |
+| Input | Short text | Required |
+
+# Airtable
+
+## Triggers
+
+### New Record
+
+Scheduled
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Base | Dropdown | Required |
+| Table | Dropdown | Required |
+
+## Actions
+
+### Create Airtable Record
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Base | Dropdown | Required |
+| Table | Dropdown | Required |
+
+# Amazon S3
+
+## Triggers
+
+### New File
+
+Scheduled
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Folder Path | Short text | Optional |
+
+## Actions
+
+### Upload File
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File | File | Required |
+| File Name | Short text | Optional |
+| ACL | Dropdown | Optional |
+| Type | Dropdown | Required |
+
+### Read File
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Key | Short text | Required |
+
+# APITable
+
+## Triggers
+
+### New Record
+
+Scheduled
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Datasheet ID | Short text | Required |
+
+## Actions
+
+### Create APITable Record
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Datasheet ID | Short text | Required |
+
+### Update APITable Record
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Datasheet ID | Short text | Required |
+| Record ID | Short text | Required |
+
+### Find APITable Record
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Datasheet ID | Short text | Required |
+| Record IDs | Record IDs | Optional |
+| Filed Names | Field Names | Optional |
+| Max Records | Number | Optional |
+| Page Size | Number | Optional |
+| Page Number | Number | Optional |
+| Filter | Short text | Optional |
+
+# Approval
+
+## Actions
+
+### Wait for Approval
+
+No parameters.
+
+### Create Approval Links
+
+No parameters.
+
+# Asana
+
+## Actions
+
+### Create Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workspace | Dropdown | Required |
+| Project | Dropdown | Required |
+| Task Name | Short text | Required |
+| Task Description | Short text | Required |
+| Due Date | Short text | Optional |
+| Tags | Dropdown | Optional |
+| Assignee | Dropdown | Optional |
+
+# Bannerbear
+
+## Actions
+
+### Create Image
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Template | Dropdown | Required |
+| Template version | Number | Optional |
+| Transparent background | Checkbox | Optional |
+| Render a PDF | Checkbox | Optional |
+| Metadata | Short text | Optional |
+
+# Binance
+
+## Actions
+
+### Fetch Pair Price
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First Coin Symbol | Short text | Required |
+| Second Coin Symbol | Short text | Required |
+
+# Blackbaud
+
+## Actions
+
+### Search Contacts After Date
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Subscription Key | Short text | Required |
+| Last Modified Date | Short text | Required |
+
+### Upsert Contact on Email
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Subscription Key | Short text | Required |
+| Contact (JSON) | JSON | Required |
+
+### Get Gift subtypes
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Subscription Key | Short text | Required |
+
+### Get Fundraising List
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Subscription Key | Short text | Required |
+| Fundraising List | Dropdown | Required |
+| Last Modified Date | Short text | Optional |
+| Date added | Short text | Optional |
+| Sort token | Short text | Optional |
+| Include inactive | Checkbox | Required |
+| Limit | Number | Optional |
+
+### Create gift
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Subscription Key | Short text | Required |
+| Gift (JSON) | JSON | Required |
+
+# Bloomerang
+
+## Actions
+
+### Upsert Contact (Duplicates)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First name | Short text | Optional |
+| Last name | Short text | Optional |
+| Organization name | Short text | Optional |
+| Street | Short text | Optional |
+| Phone number | Short text | Optional |
+| Email | Short text | Optional |
+| Type | Short text | Optional |
+| Contact (JSON) | JSON | Required |
+
+### Upsert Contact (Search)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Search | Short text | Required |
+| Skip | Number | Optional |
+| Take | Number | Optional |
+| Contact type | Dropdown | Optional |
+| Contact (JSON) | JSON | Required |
+
+### Create a transaction (Advanced)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Transaction (JSON) | JSON | Required |
+
+### Get contacts
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Last Modified Date | Short text | Required |
+| The number of items to skip | Number | Optional |
+| The number of items to include | Number | Optional |
+| Is favorite | Checkbox | Optional |
+| Contact type | Dropdown | Optional |
+| Sorts by Id, CreatedDate, or LastModifiedDate (default Id) | Short text | Optional |
+| Sorts the orderBy in ascending or descending order | Short text | Optional |
+| IDs list | Array | Optional |
+
+### Get transaction Stuff (Advanced)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Transaction stuff | Dropdown | Required |
+| The number of items to skip | Number | Optional |
+| The number of items to include | Number | Optional |
+| IDs list | Array | Optional |
+| Filters to either active or inactive funds | Checkbox | Optional |
+| Filters to champaigns | Checkbox | Optional |
+| Filters to funds with names | Short text | Optional |
+
+# Box
+
+## Triggers
+
+### New File
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Folder ID | Short text | Required |
+
+### New Folder
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Folder ID | Short text | Required |
+
+### New Comment
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File/Folder ID | Short text | Required |
+| Item Type | Dropdown | Required |
+
+# Branches
+
+## Actions
+
+### (Text) contains
+
+No parameters.
+
+### (Text) does not contain
+
+No parameters.
+
+### (Text) exactly matches
+
+No parameters.
+
+### (Text) does not exactly match
+
+No parameters.
+
+### (Text) starts with
+
+No parameters.
+
+### (Text) does not start with
+
+No parameters.
+
+### (Text) ends with
+
+No parameters.
+
+### (Text) does not end with
+
+No parameters.
+
+### (Number) is greater than
+
+No parameters.
+
+### (Number) is less than
+
+No parameters.
+
+### (Boolean) is true
+
+No parameters.
+
+### (Boolean) is false
+
+No parameters.
+
+### Exists
+
+No parameters.
+
+### Does not exist
+
+No parameters.
+
+# Brevo
+
+## Actions
+
+### Create or Update Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| External ID | Short text | Optional |
+| Attributes | JSON | Optional |
+| Email Blacklisted? | Checkbox | Optional |
+| SMS Blacklisted? | Checkbox | Optional |
+| List IDs | Array | Optional |
+| SMTP Blacklist Sender | Checkbox | Optional |
+
+# Brilliant Directories
+
+## Actions
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| Password | Short text | Required |
+| Subscription ID | Short text | Required |
+| Meta | JSON | Optional |
+
+# Cal.com
+
+## Triggers
+
+### Booking Cancelled
+
+Instant. No parameters.
+
+### Booking Created
+
+Instant. No parameters.
+
+### Booking Rescheduled
+
+Instant. No parameters.
+
+# Calendly
+
+## Triggers
+
+### Event Scheduled
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Scope | Dropdown | Required |
+
+### Event Canceled
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Scope | Dropdown | Required |
+
+# Certopus
+
+## Actions
+
+### Create Credential
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Organizations | Dropdown | Required |
+| Event | Dropdown | Required |
+| Category | Dropdown | Required |
+| Generate | Checkbox | Required |
+| Publish | Checkbox | Required |
+| Recipient Email | Short text | Required |
+
+# Clarifai
+
+## Actions
+
+### Classify Images or Videos
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Model URL | Short text | Required |
+| Input URL or bytes | File | Required |
+
+### Classify Text
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Model URL | Short text | Required |
+| Input Text | Short text | Required |
+
+### Image to Text
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Model URL | Short text | Required |
+| Input URL or bytes | File | Required |
+
+### Text to Text
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Model URL | Short text | Required |
+| Input Text | Short text | Required |
+
+### Audio to Text
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Model URL | Short text | Required |
+| Input URL or bytes | File | Required |
+
+### Add Inputs
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| User ID | Short text | Required |
+| App Id | Short text | Required |
+| Input URL or bytes | File | Required |
+
+### Run Workflow
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workflow URL | Short text | Required |
+| Input URL or bytes | File | Required |
+
+# Clickup
+
+## Triggers
+
+| Content | Content | Content |
+| --- | --- | --- |
+| Content | Content | Content |
+
+## Actions
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Content | Content | Content |
+| Content | Content | Content |
+
+# Clockodo
+
+## Triggers
+
+### Task Created
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workspace | Dropdown | Required |
+
+### Task Updated
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workspace | Dropdown | Required |
+
+### Task Deleted
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workspace | Dropdown | Required |
+
+### Task Comment Posted
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+|     |     |     |
+|     |     |     |
+
+### Task Comment Updated
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workspace | Dropdown | Required |
+
+### List Created
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workspace | Dropdown | Required |
+
+# Connections
+
+## Actions
+
+### Read Connection
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Markdown | Short text | Required |
+| Connection Name | Short text | Required |
+
+# Constant Contact
+
+## Actions
+
+### Create or Update Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| List | Dropdown | Required |
+| Email | Short text | Required |
+| First Name | Short text | Optional |
+| Last Name | Short text | Optional |
+| Job Title | Short text | Optional |
+| Company Name | Short text | Optional |
+| Phone Number | Short text | Optional |
+
+# Contentful
+
+## Actions
+
+### Get Record
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Entity ID | Short text | Required |
+
+### Get Record
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Content Locale | Dropdown | Required |
+| Content Model | Dropdown | Required |
+| Publish after Creating | Checkbox | Required |
+
+# Contiguity
+
+## Actions
+
+### Send SMS
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| To  | Shor text | Required |
+| Content | Short text | Required |
+
+# CSV
+
+## Actions
+
+### Convert CSV to JSON
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| CSV Text | Short text | Required |
+| CSV contains headers | Checkbox | Required |
+| Delimiter Type | Dropdown | Required |
+
+### Convert JSON to CSV
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| CSV JSON | JSON | Required |
+| CSV contains headers | Checkbox | Required |
+| Delimiter Type | Dropdown | Required |
+
+# Data Mapper
+
+## Actions
+
+### Advanced Mapping
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Mapping | JSON | Required |
+
+# Date Helper
+
+## Actions
+
+### Get Current Date
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| To Time Format | Dropdown | Required |
+| Time Zone | Dropdown | Required |
+
+### Format Date
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Input Date | Short text | Required |
+| From Time Format | Dropdown | Required |
+| From Time Zone | Dropdown | Required |
+| To Time Format | Dropdown | Required |
+| To Time Zone | Dropdown | Required |
+
+### Extract Date Units
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Input Date | Short text | Required |
+| From Time Format | Dropdown | Required |
+| Unit to Extract | Dropdown | Required |
+
+### Date Difference
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Starting Date | Short text | Required |
+| Starting date format | Dropdown | Required |
+| Ending Date | Short text | Required |
+| Ending date format | Dropdown | Required |
+| Unit | Dropdown | Required |
+
+### Add/Subtract Time
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Input Date | Short text | Required |
+| From Time Format | Dropdown | Required |
+| To Time Format | Dropdown | Required |
+| Expression | Short text | Required |
+
+# DeepL
+
+## Actions
+
+### Translate text
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Text | Short text | Required |
+| Target language | Dropdown | Required |
+| Source language | Dropdown | Optional |
+| Split sentences | Dropdown | Optional |
+| Preserve formatting | Dropdown | Optional |
+| Formality | Dropdown | Optional |
+| Glossary id | Short text | Optional |
+| Tag handling | Dropdown | Optional |
+| Outline detection | Dropdown | Optional |
+| Non splitting tags | Short text | Optional |
+| Splitting tags | Short text | Optional |
+| Ignore tags | Short text | Optional |
+
+# Delay
+
+## Actions
+
+### Delay For
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Unit | Dropdown | Required |
+| Amount | Number | Required |
+
+### Delay Until
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Date and Time | DateTime | Required |
+
+# Discord
+
+## Triggers
+
+### New message
+
+Scheduled
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Limit | Number | Optional |
+| Channel | Dropdown | Required |
+
+## Actions
+
+### Send Message Webhook
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Webhook URL | Short text | Required |
+| Name | Short text | Optional |
+| Message | Short text | Required |
+| Avatar URL | Short text | Optional |
+| embeds | JSON | Optional |
+| Text to speech | Checkbox | Optional |
+
+### Request Approval in a Channel
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Message | Short text | Required |
+| Channel | Dropdown | Required |
+
+# Drip
+
+## Triggers
+
+### New Subscriber
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Account | Dropdown | Required |
+
+### Tag Applied
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Account | Dropdown | Required |
+
+## Actions
+
+### Apply a tag to subscriber
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Account | Dropdown | Required |
+| Subscriber Email | Short text | Required |
+| Tag | Short text | Required |
+
+### Add subscriber to a campaign
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Account | Dropdown | Required |
+| Email Series Campaign | Dropdown | Required |
+| Subscriber Email | Short text | Required |
+| tags | Array | Optional |
+| Custom Fields | JSON | Optional |
+
+### Create or Update Subscriber
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Account | Dropdown | Required |
+| Subscriber Email | Short text | Required |
+| tags | Array | Optional |
+| Custom Fields | JSON | Optional |
+| First Name | Short text | Optional |
+| Last Name | Short text | Optional |
+| Zip Code | Short text | Optional |
+| Country | Short text | Optional |
+| State | Short text | Optional |
+| City | Short text | Optional |
+| Phone | Short text | Optional |
+| Address | Short text | Optional |
+
+# DropBox
+
+## Actions
+
+### Create New Folder
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Path | Short text | Required |
+| Auto Rename | Checkbox | Optional |
+
+### Create New Text File
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Path | Short text | Required |
+| Text | Short text | Required |
+| Autorename | Checkbox | Optional |
+| Mute | Checkbox | Optional |
+| Strict conflict | Checkbox | Optional |
+
+# Facebook Leads
+
+## Triggers
+
+### New Lead
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Page | Dropdown | Required |
+| Form | Dropdown | Optional |
+
+# Figma
+
+## Triggers
+
+### New Comment (Figma Professional plan only)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team ID | Short text | Required |
+
+## Actions
+
+### Get File
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File Key | Short text | Required |
+
+### Get File Comments
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File Key | Short text | Required |
+
+### Post File Comment
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File Key | Short text | Required |
+| Comment | Short text | Required |
+
+# Files Helper
+
+## Actions
+
+### Read File
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File | File | Required |
+| Output format | Dropdown | Required |
+
+# Freshdesk
+
+## Actions
+
+### Get Tickets
+
+No parameters.
+
+### Get Contact from ID
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Contact ID number | Short text | Required |
+
+### Get Ticket Status
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Ticket ID | Short text | Required |
+
+# Freshsales
+
+## Actions
+
+### Create Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First name | Short text | Optional |
+| Last name | Short text | Optional |
+| Job title | Short text | Optional |
+| Email | Short text | Required |
+| Work number | Short text | Optional |
+| Mobile number | Short text | Optional |
+| Address | Short text | Optional |
+| City | Short text | Optional |
+| State | Short text | Optional |
+| Zip code | Short text | Optional |
+| Country | Short text | Optional |
+| Territory id | Short text | Optional |
+| Owner id | Short text | Optional |
+| Subscription status | Short text | Optional |
+| Medium | Short text | Optional |
+| Campaign id | Short text | Optional |
+| Keyword | Short text | Optional |
+| Timezone | Short text | Optional |
+| Facebook | Short text | Optional |
+| Twitter | Short text | Optional |
+| Linkedin | Short text | Optional |
+| Contact status id | Short text | Optional |
+| Sales account id | Short text | Optional |
+
+# GCloud Pub/Sub
+
+## Triggers
+
+### New Message
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Subscription name | Short text | Required |
+| Topic | Dropdown | Required |
+| Ack Deadline Seconds | Number | Required |
+
+## Actions
+
+### Publish to topic
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Message | JSON | Required |
+| Topic | Dropdown | Required |
+
+# GenerateBanners
+
+## Actions
+
+### Render Template
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Template | Dropdown | Required |
+| File type | Dropdown | Required |
+| Audio url | Short text | Optional |
+
+# GhostCMS
+
+## Triggers
+
+### Member Added
+
+Instant. No parameters.
+
+### Member Edited
+
+Instant. No parameters.
+
+### Member Deleted
+
+Instant. No parameters.
+
+### Post Published
+
+Instant. No parameters.
+
+### Post Scheduled
+
+Instant. No parameters.
+
+### Page Published
+
+Instant. No parameters.
+
+## Actions
+
+### Create Member
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| Full Name | Short text | Optional |
+| Note | Short text | Optional |
+| Newsletters | Dropdown | Optional |
+
+### Update Member
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Member | Dropdown | Required |
+| Email | Short text | Optional |
+| Full name | Short text | Optional |
+| Note | Short text | Optional |
+| Newsletters | Dropdown | Optional |
+
+### Create Post
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Title | Short text | Required |
+| Slug | Short text | Optional |
+| Status | Dropdown | Required |
+| Published At | DateTime | Optional |
+| Content (HTML) | Short text | Required |
+| Custom Excerpt | Short text | Optional |
+| Author | Dropdown | Required |
+| Featured | Checkbox | Optional |
+| Tags | Dropdown | Optional |
+
+### Find Member
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+
+### Find User
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+
+# Github
+
+## Triggers
+
+### New Pull Request
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Repository | Dropdown | Required |
+
+### New Star
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Repository | Dropdown | Required |
+
+### New Issue
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Repository | Dropdown | Required |
+
+## Actions
+
+### Create Issue
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Repository | Dropdown | Required |
+| Title | Short text | Required |
+| Description | Short text | Optional |
+| Labels | Dropdown | Optional |
+| Assignees | Dropdown | Optional |
+
+# Gitlab
+
+## Triggers
+
+### New Project Issue Event
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Project | Dropdown | Required |
+| Issue Event | Dropdown | Required |
+
+## Actions
+
+### Create Issue
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Project | Dropdown | Required |
+| Issue Title | Short text | Required |
+| Issue Description | Short text | Optional |
+
+# Gmail
+
+## Actions
+
+### Send Email
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Receiver Email (to) | Array | Required |
+| CC Email | Array | Optional |
+| BCC Email | Array | Optional |
+| Subject | Short text | Required |
+| Body (Text) | Short text | Required |
+| Reply-To Email | Array | Optional |
+| Body (HTML) | Short text | Optional |
+| Sender Name | Short text | Optional |
+| Attachment | File | Optional |
+
+# Google Calendar
+
+## Triggers
+
+### New Or updated Event
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Calendar | Dropdown | Required |
+
+## Actions
+
+### Create Quick Event
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Calendar | Dropdown | Required |
+| Summary | Short text | Required |
+| Send Updates | Dropdown | Optional |
+
+### Create Event
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Calendar | Dropdown | Required |
+| Title of the event | Short text | Required |
+| Start date time of the event | Datetime | Required |
+| End date time of the event | Datetime | Optional |
+
+# Google Contacts
+
+## Triggers
+
+### New Or Updated Contact
+
+Scheduled. No parameters.
+
+## Actions
+
+### Add Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First Name | Short text | Required |
+| Middle Name | Short text | Optional |
+| Last Name | Short text | Required |
+| Job Title | Short text | Optional |
+| Company | Short text | Optional |
+| Email | Short text | Optional |
+| Phone Number | Short text | Optional |
+
+# Google Docs
+
+## Actions
+
+### Create Document
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Document Title | Short text | Required |
+| Document Content | Short text | Required |
+
+# Google Drive
+
+## Triggers
+
+### New File
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Parent Folder | Dropdown | Optional |
+| Include Team Drives | Checkbox | Optional |
+
+### New Folder
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Parent Folder | Dropdown | Optional |
+| Include Team Drives | Checkbox | Optional |
+
+## Actions
+
+### Create new folder
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Folder name | Short text | Required |
+| Parent Folder | Dropdown | Optional |
+| Include Team Drives | Checkbox | Optional |
+
+### Create new file
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File name | Short text | Required |
+| Text | Short text | Required |
+| Content type | Dropdown | Required |
+| Parent Folder | Dropdown | Optional |
+| Include Team Drives | Checkbox | Optional |
+
+### Upload file
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File name | Short text | Required |
+| File | File | Required |
+| Parent Folder | Dropdown | Optional |
+| Include Team Drives | Checkbox | Optional |
+
+### Read file
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File ID | Short text | Required |
+| Destination File name | Short text | Optional |
+
+# Google Forms
+
+## Triggers
+
+### New Response
+
+Scheduled
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+
+# Google My Business
+
+## Triggers
+
+### New Review
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Account | Dropdown | Required |
+| Location | Dropdown | Required |
+
+## Actions
+
+### Create or Update Reply
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Review Name | Short text | Required |
+| Comment | Short text | Required |
+
+# Google Sheets
+
+## Triggers
+
+### New Row
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Spreadsheet | Dropdown | Required |
+| Include Team Drive Sheets | Checkbox | Optional |
+| Sheet | Dropdown | Required |
+| Max Rows to Poll | Number | Optional |
+
+## Actions
+
+### Insert Row
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Spreadsheet | Dropdown | Required |
+| Include Team Drive Sheets | Checkbox | Optional |
+| Sheet | Dropdown | Required |
+| As String | Checkbox | Optional |
+| Are the First row Headers? | Checkbox | Required |
+
+### Delete Row
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Spreadsheet | Dropdown | Required |
+| include Team Drive Sheet | Checkbox | Optional |
+| Sheet | Dropdown | Required |
+| Row Number | Number | Required |
+
+### Update Row
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Spreadsheet | Dropdown | Required |
+| Include Team Drive Sheets | Checkbox | Optional |
+| Sheet | Dropdown | Required |
+| Row Number | Number | Required |
+| Are the First row Headers? | Checkbox | Required |
+
+### Find Rows
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Spreadsheet | Dropdown | Required |
+| Include Team Drive Sheets | Checkbox | Optional |
+| Sheet | Dropdown | Required |
+| The name of the column to search in | Dropdown | Required |
+| Search Value | Short text | Optional |
+| Exact match | Checkbox | Required |
+| Starting Row | Number | Optional |
+| Number of Rows | Number | Optional |
+
+### Clear Sheet
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Spreadsheet | Dropdown | Required |
+| Include Team Drive Sheets | Checkbox | Optional |
+| Sheet | Dropdown | Required |
+| Is First row Headers? | Checkbox | Required |
+
+### Get Row
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Spreadsheet | Dropdown | Required |
+| Include Team Drive Sheets | Checkbox | Optional |
+| Sheet | Dropdown | Required |
+| Row Number | Number | Required |
+
+### Get next row(s)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Spreadsheet | Dropdown | Required |
+| Include Team Drive Sheets | Checkbox | Optional |
+| Sheet | Dropdown | Required |
+| Memory Key | Short text | Required |
+| Group Size | Number | Required |
+
+# Google Tasks
+
+## Triggers
+
+### New Task
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Task List | Dropdown | Required |
+
+## Actions
+
+### Add Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Task List | Dropdown | Required |
+| Title | Short text | Required |
+| Notes | Short text | Optional |
+| Completed | Checkbox | Optional |
+
+# Gotify
+
+## Actions
+
+### Send Notification
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Title | Short text | Required |
+| Message | Short text | Required |
+| Priority | Number | Optional |
+
+# Gravityforms
+
+## Triggers
+
+### New Submission
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Markdown | Short text | Required |
+
+# Hacker News
+
+## Actions
+
+### Fetch Top Stories
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Number of Stories | Number | Required |
+
+# HTTP
+
+## Actions
+
+### Send HTTP request
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Method | Dropdown | Required |
+| URL | Short text | Required |
+| Headers | JSON | Required |
+| Query params | JSON | Required |
+| Body | JSON | Optional |
+| No Error On Failure | Checkbox | Optional |
+| Timeout(in seconds) | Number | Optional |
+
+### Return Response
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Status | Number | Optional |
+| Headers | JSON | Optional |
+| Response | JSON | Required |
+
+# HubSpot
+
+## Triggers
+
+### New Task
+
+Scheduled. No parameters.
+
+### New Company Added
+
+Scheduled. No parameters.
+
+### New Contact Added
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Properties | Dropdown | Optional |
+
+### New Deal Added
+
+Scheduled. No parameters.
+
+### New Ticket Added
+
+Scheduled. No parameters.
+
+## Actions
+
+### Create Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First name | Short text | Required |
+| Last Name | Short text | Required |
+| Zip Code | Short text | Optional |
+| Email | Short text | Optional |
+| Properties | Dropdown | Optional |
+
+### Create or Update Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| First name | Short text | Optional |
+| Last Name | Short text | Optional |
+| Zip Code | Short text | Optional |
+
+### Add contact To List
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| List | Dropdown | Required |
+| Email | Short text | Required |
+
+# IMAP
+
+## Triggers
+
+### New Email
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Mailbox | Dropdown | Required |
+| Markdown | Short text | Required |
+
+# Intercom
+
+## Actions
+
+### Get or Create Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Role | Dropdown | Required |
+| Email | Short text | Required |
+| External Id | Short text | Optional |
+| Name | Short text | Optional |
+| Phone | Short text | Optional |
+| Avatar Url | Short text | Optional |
+| Custom Attributes | JSON | Optional |
+
+### Create Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Role | Dropdown | Required |
+| Email | Short text | Required |
+| External Id | Short text | Optional |
+| Name | Short text | Optional |
+| Phone | Short text | Optional |
+| Avatar Url | Short text | Optional |
+| Custom Attributes | JSON | Optional |
+
+### Send Message
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Message Type | Dropdown | Required |
+| From (Admin) | Dropdown | Required |
+| To  | Dropdown | Required |
+| Message Body | Short text | Required |
+| Create Conversation Without Contact Reply | Checkbox | Optional |
+
+# Invoice Ninja
+
+## Actions
+
+### Create Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Task or Ticket Number (alphanumeric) | Short text | Required |
+| Client ID (alphanumeric) | Short text | Optional |
+| Project ID (alphanumeric) | Short text | Optional |
+| Description of task | Short text | Required |
+| Custom hourly rate | Number | Optional |
+
+### Check Task Existence
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Task or Ticket Number (alphanumeric) | Short text | Required |
+
+### Get Client Details from e-mail
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Client e-mail address | Short text | Required |
+
+# Jotform
+
+## Triggers
+
+### New Submission
+
+Instant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+
+# Kimai
+
+## Actions
+
+### Create Timesheet
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Project | Dropdown | Required |
+| Activity | Dropdown | Required |
+| Begin Date | Datetime | Required |
+| End Date | Datetime | Optional |
+| Description | Short text | Optional |
+
+# Kizeo Forms
+
+## Tiggers
+
+### Event On Data
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+| Events | Dropdown | Required |
+
+### Event On Data Deleted
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+
+### Event On Data Finished
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+
+### Event On Data Pushed
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+
+### Event On Data Received
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+
+### Event On Data Updated
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+
+## Actions
+
+### Get Data Definition
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+| Data Id | Number | Required |
+
+### Push Data
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+| User | Dropdown | Required |
+
+### Download Standard PDF
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+| Data Id | Number | Required |
+
+### Download custom export in its original format
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+| Export | Dropdown | Required |
+| Export in PDF | Checkbox | Required |
+| Data Id | Number | Required |
+
+### Get list definition
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| List | Dropdown | Required |
+
+### Get List Item
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| List | Dropdown | Required |
+| Item Id | Short text | Required |
+
+### Get all List Items
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Search | Short text | Optional |
+| Offset | Number | Optional |
+| Limit | Number | Optional |
+| Sort | Short text | Optional |
+| Direction | Short text | Optional |
+| List | Dropdown | Required |
+
+### Create List Item
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| List | Dropdown | Required |
+| Item Label | Short text | Required |
+
+### Edit List Item
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| List | Dropdown | Required |
+| Item Id | Short text | Required |
+| Item Lbel | Short text | Required |
+
+### Delete List Item
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| List | Dropdown | Required |
+| Item Id | Short text | Required |
+
+# Linear
+
+## Triggers
+
+### New Issue
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team | Dropdown | Required |
+
+## Actions
+
+### Create Issue
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team | Dropdown | Required |
+| Title | Short text | Required |
+| Description | Short text | Optional |
+| Status | Dropdown | Optional |
+| Labels | Dropdown | Optional |
+| Assignee | Dropdown | Optional |
+| Priority | Dropdown | Optional |
+
+### Update Issue
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team | Dropdown | Required |
+| Issue | Dropdown | Required |
+| Title | Short text | Optional |
+| Description | Short text | Optional |
+| Status | Dropdown | Optional |
+| Labels | Dropdown | Optional |
+| Assignee | Dropdown | Optional |
+| Priority | Dropdown | Optional |
+
+### Create Project
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team | Dropdown | Required |
+| Project name | Short text | Required |
+| Description | Short text | Optional |
+| Icon | Shor text | Optional |
+| Color | Short text | Optional |
+| Start Date | Datetime | Optional |
+| Target Date | Datetime | Optional |
+
+### Update Project
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team | Dropdown | Required |
+| Project | Dropdown | Required |
+| Project name | Short text | Required |
+| Description | Short text | Optional |
+| Icon | Shor text | Optional |
+| Color | Short text | Optional |
+| Start Date | Datetime | Optional |
+| Target Date | Datetime | Optional |
+
+### Create Comment
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team | Dropdown | Required |
+| Assignee | Dropdown | Optional |
+| Issue | Dropdown | Required |
+| Comment Body | Short text | Required |
+
+# LinkedIn
+
+## Actions
+
+### Create Share Update
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Text | Short text | Required |
+| Visibility | Dropdown | Required |
+| Image | File | Optional |
+| Content - URL | Short text | Optional |
+| Content - Title | Short text | Optional |
+| Content - Description | Short text | Optional |
+
+### Create Company Update
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Company Page | Dropdown | Required |
+| Image | File | Optional |
+| Text | Short text | Required |
+| Content - URL | Short text | Optional |
+| Content - Title | Short text | Optional |
+| Content - Description | Short text | Optional |
+
+# Llmrails
+
+## Actions
+
+### Datrastore search
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Datastore ID | Short text | Required |
+| Text | Short text | Required |
+| Hybrid search | Checkbox | Required |
+| Summarize | Checkbox | Required |
+
+# LocalAI
+
+## Actions
+
+### Ask LocalAI
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Model | Dropdown | Required |
+| Question | Short text | Required |
+| Temperature | Number | Optional |
+| Maximum Tokens | Number | Optional |
+| Top P | Number | Optional |
+| Frequency penalty | Number | Optional |
+| Presence penalty | Number | Optional |
+| Roles | JSON | Optional |
+
+# Loops
+
+## Actions
+
+### Loop
+
+No parameters.
+
+# Mailchimp
+
+## Triggers
+
+### Member Subscribed to Audience
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Audience | Dropdown | Required |
+
+## Actions
+
+### Add Member to an Audience (List)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First Name | Short text | Optional |
+| Last Name | Short text | Optional |
+| Email | Short text | Required |
+| Audience | Dropdown | Required |
+| Status | Dropdown | Required |
+
+# MailerLite
+
+## Actions
+
+### Add or Update subscriber
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| Name | Short text | Optional |
+
+# Mastodon
+
+## Actions
+
+### Post Status
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Status | Short text | Required |
+
+# Math Helper
+
+## Actions
+
+### Addition
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First Number | Number | Required |
+| Second Number | Number | Required |
+
+### Subtraction
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First Number | Number | Required |
+| Second Number | Number | Required |
+
+### Multiplication
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First Number | Number | Required |
+| Second Number | Number | Required |
+
+### Division
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First Number | Number | Required |
+| Second Number | Number | Required |
+
+### Modulo
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First Number | Number | Required |
+| Second Number | Number | Required |
+
+### Generate Random Number
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First Number | Number | Required |
+| Second Number | Number | Required |
+
+# Matrix
+
+## Actions
+
+### Send Message
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Room Alias | Short text | Required |
+| Message | Short text | Required |
+
+# Mattermost
+
+## Actions
+
+### Send Message
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Channel ID | Short text | Required |
+| Message Text | Short text | Required |
+
+# Mautic
+
+## Actions
+
+### Create Contact
+
+No parameters.
+
+### Search Contact
+
+No parameters.
+
+### Update Contact With Contact Id
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Id of the entity | Short text | Required |
+
+### Create Company
+
+No parameters.
+
+### Search Company
+
+No parameters.
+
+### update Company With Company Contact Id
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Id of the entity | Short text | Required |
+
+# Microsoft Excel 365
+
+## Triggers
+
+### New Row
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Max Rows to Poll | Number | Optional |
+
+## Actions
+
+### Append Row to Worksheet
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Are the First row Headers? | Checkbox | Required |
+
+### Get Worksheets
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Return All | Checkbox | Optional |
+| Limit | Number | Optional |
+
+### Get Worksheet Rows
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Range | Short text | Optional |
+| Header Row | Number | Optional |
+| First Data Row | Number | Optional |
+
+### Update Worksheet Rows
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Row number | Number | Required |
+| Are the First row Headers? | Checkbox | Required |
+
+### Clear Worksheet
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Range | Short text | Optional |
+
+### Delete Worksheet
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+
+### Get Workbooks
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Limit | Number | Optional |
+
+### Delete Workbook
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+
+### Add a Worksheet to a Workbook
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet Name | Short text | Optional |
+
+### Get Table Rows
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Table | Dropdown | Required |
+| Limit | Number | Optional |
+
+### Get Table Columns
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Table | Dropdown | Required |
+| Limit | Number | Optional |
+
+### Create Table
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Select Range | Dropdown | Required |
+| Range | Short text | Optional |
+| Has Headers | Checkbox | Required |
+
+### Delete Table
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Table | Dropdown | Required |
+
+### Lookup Table Column
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Table | Dropdown | Required |
+| Lookup Column | Short text | Required |
+| Lookup Value | Short text | Required |
+| Return All Matches | Checkbox | Optional |
+
+### Append Rows to a Table
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Table | Dropdown | Required |
+
+### Convert to Range
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workbook | Dropdown | Required |
+| Worksheet | Dropdown | Required |
+| Table | Dropdown | Required |
+
+# Microsoft OneDrive
+
+## Triggers
+
+### New File
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Parent Folder | Dropdown | Optional |
+
+## Actions
+
+### Upload file
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File name | Short text | Required |
+| File | File | Required |
+| Parent Folder | Dropdown | Optional |
+
+### Download file
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File ID | Short text | Required |
+
+### List Files
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Parent Folder | Dropdown | Optional |
+
+### List Folders
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Parent Folder | Dropdown | Optional |
+
+# Mindee
+
+## Actions
+
+### Extract Document
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Account Name | Short text | Required |
+| API Name | Dropdown | Required |
+| File URL | Short text | Required |
+
+# Monday
+
+## Triggers
+
+### New Item Created
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workspace | Dropdown | Required |
+| Board | Dropdown | Required |
+
+### New Update
+
+Scheduled. No parameters.
+
+## Actions
+
+### Create Item
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Workspace | Dropdown | Required |
+| Board | Dropdown | Required |
+| Group | Dropdown | Optional |
+| Item Name | Short text | Required |
+| Column Values | JSON | Optional |
+| Create Labels if Missing | Checkbox | Optional |
+
+### Update Item
+
+| Workspace | Dropdown | Required |
+| --- | --- | --- |
+| Board | Dropdown | Required |
+| Group | Dropdown | Optional |
+| Item | Dropdown | Required |
+| Column Values | JSON | Optional |
+| Create Labels if Missing | Checkbox | Optional |
+
+### Get Column Values
+
+| Workspace | Dropdown | Required |
+| --- | --- | --- |
+| Board | Dropdown | Required |
+| Group | Dropdown | Optional |
+| Item Id | Short text | Required |
+
+### Get Item by Column Values
+
+| Workspace | Dropdown | Required |
+| --- | --- | --- |
+| Board | Dropdown | Required |
+| Group | Dropdown | Optional |
+| Column Id | Short text | Required |
+| Column Values | Array | Optional |
+
+# MySQL
+
+## Actions
+
+### Find Rows
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Timezone | Short text | Optional |
+| Table | Dropdown | Required |
+| Condition | Short text | Required |
+| Arguments | Array | Optional |
+| Columns | Array | Optional |
+
+### Insert Row
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Timezone | Short text | Optional |
+| Table | Dropdown | Required |
+| Values | JSON | Required |
+
+### Update Row
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Timezone | Short text | Optional |
+| Table | Dropdown | Required |
+| Values | JSON | Required |
+| Search Column | Short text | Required |
+| Search Value | Short text | Required |
+
+### Delete Row
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Timezone | Short text | Optional |
+| Table | Dropdown | Required |
+| Search Column | Short text | Required |
+| Search Value | Short text | Required |
+
+### Get Tables
+
+No parameters.
+
+### Execute Query
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Timezone | Short text | Optional |
+| Query | Short text | Required |
+| Arguments | Array | Optional |
+
+# Nifty
+
+## Actions
+
+### Create Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Portfolio | Dropdown | Required |
+| Project | Dropdown | Required |
+| Status | Dropdown | Required |
+| Milestone | Dropdown | Required |
+| Task Name | Short text | Required |
+
+# Notion
+
+## Triggers
+
+### New Database Item
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Database | Dropdown | Required |
+
+## Actions
+
+### Create Database Item
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Database | Dropdown | Required |
+
+### Update Database item
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Database | Dropdown | Required |
+| Database Item | Dropdown | Required |
+
+# Ntfy
+
+## Actions
+
+### Send Notification
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Topic | Short text | Required |
+| Title | Short text | Optional |
+| Message | Short text | Required |
+| Priority | Short text | Optional |
+| Tags | Array | Optional |
+| Icon | Short text | Optional |
+| Actions | Short text | Optional |
+| Click | Short text | Optional |
+| Delay | Short text | Optional |
+
+# Onfleet
+
+## Task Arrival
+
+### Task Arrival
+
+Instant. No Parameters.
+
+### Task Assigned
+
+Instant. No Parameters.
+
+### Task Cloned
+
+Instant. No Parameters.
+
+### Task Completed
+
+Instant. No Parameters.
+
+### Task Created
+
+Instant. No Parameters.
+
+### Task Delayed
+
+Instant. No Parameters.
+
+### Task Deleted
+
+Instant. No Parameters.
+
+### Task ETA
+
+Instant. No Parameters.
+
+### Task Failed
+
+Instant. No Parameters.
+
+### Task Started
+
+Instant. No Parameters.
+
+### Task Unassigned
+
+Instant. No Parameters.
+
+### Task Updated
+
+Instant. No Parameters.
+
+### Worker Created
+
+Instant. No Parameters.
+
+### Worker Deleted
+
+Instant. No Parameters.
+
+### Worker Duty Change
+
+Instant. No Parameters.
+
+### Auto Dispatch Completed
+
+Instant. No Parameters.
+
+### SMS Recipient Opt Out
+
+Instant. No Parameters.
+
+### SMS Recipient Response Missed
+
+Instant. No Parameters.
+
+## Actions
+
+### Create Recipient
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Phone | Short text | Required |
+| Notes | Short text | Optional |
+| Skip SMS Notifications | Checkbox | Optional |
+| Skip Phone Number Validation | Checkbox | Optional |
+| Use Long Code for Text - Canadian Organizations Only | Checkbox | Optional |
+
+### Update Recipient
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Recipient ID | Short text | Required |
+| Name | Short text | Optional |
+| Notes | Short text | Optional |
+| Skip SMS Notifications | Checkbox | Optional |
+
+### Get Recipient
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Recipient ID | Short text | Required |
+
+### Create Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| merchant ID | Short text | Optional |
+| Executor ID | Short text | Optional |
+| Unparsed Destination | Checkbox | Required |
+| Use Recipient ID | Checkbox | Required |
+| Complete After | Datetime | Optional |
+| Complete Before | Datetime | Optional |
+| Pickup | Checkbox | Optional |
+| Quantity | Number | Optional |
+| Recipient Name Override | Short text | Optional |
+| Recipient Notes Override | Short text | Optional |
+| Recipient Skip SMS Override | Checkbox | Optional |
+| Service Time | Number | Optional |
+
+### Delete Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Task ID | Short text | Required |
+
+### Force Complete Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Task ID | Short text | Required |
+| Complete as Success | Checkbox | Required |
+| Notes | Short text | Optional |
+
+### Clone Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Task ID | Short text | Required |
+
+### Update Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Task ID | Short text | Required |
+| Merchant ID | Short text | Optional |
+| Executor ID | Short text | Optional |
+| Complete After | Datetime | Optional |
+| Complete Before | Datetime | Optional |
+| Pickup | Checkbox | Optional |
+| Quantity | Number | Optional |
+| Service Time | Number | Optional |
+
+### Get Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Task ID | Short text | Required |
+
+### Get Tasks
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| From | Datetime | Required |
+| To  | Datetime | Optional |
+| State | Dropdown | Optional |
+
+### Create Destination
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Unparsed Destination | Checkbox | Required |
+| Notes | Notes | Optional |
+
+### Get Destination
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Destination ID | Short text | Required |
+
+### Get Hubs
+
+No parameters.
+
+### Create Hub
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Unparsed Destination | Checkbox | Required |
+| Teams | Dropdown | Optional |
+
+### Update Hub
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Hub | Dropdown | Required |
+| Name | Short text | Optional |
+| Teams | Dropdown | Optional |
+
+### Get Organization
+
+No parameters.
+
+### Get Delegatee Details
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Organization ID | Short text | Requried |
+
+### Create Administrator
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Email | Short text | Required |
+| Phone Number | Short text | Optional |
+| Read Only | Checkbox | Optional |
+
+### Update Administrator
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Administrator | Dropdown | Required |
+| Name | Short text | Optional |
+
+### Get Administrators
+
+No parameters.
+
+### Delete Administrator
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Administrator | Dropdown | Required |
+
+### Create Worker
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Phone | Short text | Required |
+| Teams | Dropdown | Required |
+| Capacity | Number | Optional |
+| Display Name | Short text | Optional |
+
+### Delete Worker
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Worker | Dropdown | Required |
+
+### Get Worker
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Worker | Dropdown | Required |
+
+### Get Worker Schedule
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Worker | Dropdown | Required |
+
+### Update Worker
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Worker | Dropdown | Required |
+| Name | Short text | Optional |
+| Teams | Dropdown | Optional |
+| Capacity | Number | Optional |
+| Display Name | Short text | Optional |
+
+### Create Team
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Workers | Dropdown | Required |
+| Managers | Dropdown | Required |
+| Hub | Dropdown | Optional |
+| Enable Self Assignment | Checkbox | Optional |
+
+### Delete Team
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team | Dropdown | Required |
+
+### Get Team
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team | Dropdown | Required |
+
+### Get Teams
+
+No parameters.
+
+### Update Team
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Team | Dropdown | Required |
+| Name | Short text | Optional |
+| Workers | Dropdown | Optional |
+| Managers | Dropdown | Optional |
+| Hub | Dropdown | Optional |
+| Enable Self Assignment | Checkbox | Optional |
+
+### Get Container
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Container Type | Dropdown | Required |
+| Container ID | Short text | Required |
+
+# OpenAI
+
+## Actions
+
+### Ask ChatGPT
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Model | Dropdown | Required |
+| Question | Short text | Required |
+| Temperature | Number | Optional |
+| Maximum Tokens | Number | Optional |
+| Top p | Number | Optional |
+| Frequency penalty | Number | Optional |
+| Presence penalty | Number | Optional |
+| Roles | JSON | Optional |
+
+### Transcribe Audio
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Audio | File | Required |
+| Language of the Audio | Dropdown | Optional |
+
+### Translate Audio
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Audio | File | Required |
+
+# OpenRouter
+
+## Actions
+
+### Ask LLM
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Model | Dropdown | Required |
+| Prompt | Short text | Required |
+| Temperature | Number | Optional |
+| Maximum Tokens | Number | Optional |
+| Top P | Number | Optional |
+
+# Pastebin
+
+## Actions
+
+### Create Paste
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Content | Short text | Required |
+| Format | Dropdown | Optional |
+| Name | Short text | Optional |
+| Privacy | Dropdown | Optional |
+| Expiry | Dropdown | Optional |
+| Folder | Short text | Optional |
+
+### Get Paste Content
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Paste ID | Short text | Required |
+
+# Pastefy
+
+## Triggers
+
+### Paste Changed
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Paste ID | Short text | Required |
+| Include Title | Checkbox | Optional |
+
+## Actions
+
+### Create Paste
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Content | Short text | Required |
+| Title | Short text | Optional |
+| Encryption Password | Short text | Optional |
+| Folder | Dropdown | Optional |
+| Visibility | Dropdown | Optional |
+| Expiry Date | Datetime | Optional |
+
+### Get Paste
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Paste ID | Short text | Required |
+| Encryption Password | Short text | Optional |
+
+### Edit Paste
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Paste ID | Short text | Required |
+| Content | Short text | Optional |
+| Title | Short text | Optional |
+| Encryption Password | Short text | Optional |
+| Folder | Dropdown | Optional |
+| Visibility | Dropdown | Optional |
+| Expiry Date | Datetime | Optional |
+
+### Delete Paste
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Paste ID | Short text | Required |
+
+### Create Folder
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Parent Folder | Dropdown | Optional |
+
+### Get Folder
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Folder | Dropdown | Required |
+
+### Get Folder Hierarchy
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Start Folder | Dropdown | Optional |
+
+### Delete Folder
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Folder | Dropdown | Required |
+
+# Pipedrive
+
+## Triggers
+
+### New Person
+
+Instant. no parameters.
+
+### New Deal
+
+Instant. no parameters.
+
+### New Activity
+
+Instant. no parameters.
+
+### Updated Person
+
+Instant. no parameters.
+
+### Updated Deal
+
+Instant. no parameters.
+
+## Actions
+
+### Add Person
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Owner | Dropdown | Optional |
+| Organization | Dropdown | Optional |
+| Email | Short text | Optional |
+| Phone | Short text | Optional |
+| Marketing Status | Dropdown | Optional |
+
+# Postgres
+
+## Actions
+
+### Run Query
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Query | Short text | Required |
+| Query Timeout | Number | Optional |
+| Connection Timeout (ms) | Number | Optional |
+| Application Name | Short text | Optional |
+
+# PostHog
+
+## Actions
+
+### Create Event
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Event name | Short text | Required |
+| Event type | Dropdown | Required |
+| Distinct Id | Short text | Required |
+| Properties | JSON | Optional |
+| Context | JSON | Optional |
+| Message ID | Short text | Optional |
+| Category | Short text | Optional |
+
+### Create Project
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Optional |
+| Slack Incoming Webhook | Short text | Optional |
+| Anonymize IPs | Checkbox | Optional |
+| Is demo project | Checkbox | Optional |
+
+# Pushover
+
+## Action
+
+### Send Norification
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Title | Short text | Optional |
+| Message | Short text | Required |
+| Enable HTML | Checkbox | Optional |
+| Priority | Number | Optional |
+| Retry | Number | Optional |
+| Expire | Number | Optional |
+| URL | Short text | Optional |
+| URL Title | Short text | Optional |
+| Timestamp | Short text | Optional |
+| Device | Short text | Optional |
+
+# Qdrant
+
+## Actions
+
+### Add points to collection
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Collection Name | Short text | Required |
+| Embeddings | File | Required |
+| Embeddings Ids | Short text | Required |
+| Calculation Method of distance | Dropdown | Required |
+| Content Chunks | File | Optional |
+| Additional Payload | JSON | Optional |
+| Storage | Dropdown | Optional |
+
+### Get Collection List
+
+No parameters.
+
+### Get Collection Infos
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Collection Name | Short text | Required |
+
+### Delete Collection
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Collection Name | Short text | Required |
+
+### Delete Points
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Collection Name | Short text | Required |
+| Choose Points By | Dropdown | Required |
+
+### Get Points
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Collection Name | Short text | Required |
+| Choose Points By | Dropdown | Required |
+
+### Search Points
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Collection Name | Short text | Required |
+| Embedding | File | Required |
+| Must Have | JSON | Optional |
+| Must Have Not | JSON | Optional |
+| Negative Vector | File | Optional |
+| Limit Result | Number | Optional |
+
+# Resend
+
+## Actions
+
+### Send Email
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| To  | Array | Required |
+| Sender Name | Short text | Required |
+| Sender Email (From) | Short text | Required |
+| BCC | Array | Optional |
+| CC  | Array | Optional |
+| Reply To | Short text | Optional |
+| Subject | Short text | Required |
+| Content Type | Dropdown | Required |
+| Content | Short text | Required |
+
+# RSS Feed
+
+## Triggers
+
+### New Item In Feed
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| RSS Feed URL | Short text | Required |
+
+# Saastic
+
+## Actions
+
+### Create or Update a Customer
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| First name | Short text | Required |
+| Last Name | Short text | Required |
+| Email | Short text | Required |
+| Phone | Short text | Optional |
+| Signup Date | Datetime | Optional |
+
+### Create a Customer Charge
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| Amount | Number | Optional |
+| Currency | Short text | Optional |
+| Charge date | Datetime | Optional |
+
+# Salesforce
+
+## Triggers
+
+### New Record
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Object | Dropdown | Required |
+| Conditions (Advanced) | Short text | Optional |
+
+### New or Updated Record
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Object | Dropdown | Required |
+| Conditions (Advanced) | Short text | Optional |
+
+## Actions
+
+### Run Query (Advanced)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Query | Short text | Required |
+
+### Create Object (Advanced)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Object | Dropdown | Required |
+| Data | JSON | Required |
+
+### Update Object (Advanced)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Object | Dropdown | Required |
+| Id  | Short text | Required |
+| Data | JSON | Required |
+
+### Batch Upsert (Advanced)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Object | Dropdown | Required |
+| External Field | Short text | Required |
+| Records | JSON | Required |
+
+### Bulk Upsert (Advanced)
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Object | Dropdown | Required |
+| External Field | Short text | Required |
+| Records | JSON | Required |
+
+# Salsa
+
+## Actions
+
+### Get supporters
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| APU Url | Short text | Required |
+| A list of ids to search for | Array | Optional |
+| Identifier Type | Dropdown | Optional |
+| The string to search for | Short text | Optional |
+| Starting Modified Date | Short text | Required |
+| Last Modified Date | Short text | Optional |
+| The starting index of items | Number | Optional |
+| The count of items | Number | Optional |
+| Include cell-phone | Checkbox | Optional |
+| Include Normal | Checkbox | Optional |
+
+### Upsert Supporter on Email
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| APU Url | Short text | Required |
+| Suppoorters (JSON Array) | JSON | Required |
+
+### Upsert Offline Donation
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| APU Url | Short text | Required |
+| Offline Donation (JSON Array) | JSON | Required |
+
+# Schedule
+
+## Triggers
+
+### Every X Minutes
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Minutes | Number | Required |
+
+### Every Hour
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Run on weekends (Sat, Sun) | Checkbox | Required |
+
+### Every Day
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Hour of the day | Drodpown | Required |
+| Timezone | Dropdown | Required |
+| Run on weekends (Sat, Sun) | Checkbox | Required |
+
+### Every Week
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Day of the week | Dropdown | Required |
+| Hour of the day | Dropdown | Required |
+| Timezone | Dropdown | Required |
+
+### Every Month
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Day of the month | Dropdown | Required |
+| Hour of the day | Dropdown | Required |
+| Timezone | Dropdown | Required |
+
+### Cron Expression
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Cron Expression | Short text | Required |
+| Timezone | Dropdown | Required |
+
+# Sendfox
+
+## Actions
+
+### Create List
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| List Name | Short text | Required |
+
+### Unsubscribe Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+
+### Create Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| First Name | Short text | Optional |
+| Last Name | Short text | Optional |
+| Lists | Dropdown | Optional |
+
+# SendGrid
+
+## Action
+
+### Send Email
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| To  | Array | Required |
+| From (Email) | Short text | Required |
+| From (Name) | Short text | Optional |
+| Reply To | Short text | Optional |
+| Subject | Short text | Required |
+| Content Type | Dropdown | Required |
+| Content | Short text | Required |
+
+### Send Dynamic Template
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| To  | Array | Required |
+| From (Name) | Short text | Optional |
+| From (Email) | Short text | Required |
+| Template Id | Short text | Required |
+| Template Data | JSON | Required |
+| Reply To | Short text | Optional |
+
+# SFTP
+
+## Triggers
+
+### New File
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Path | Short text | Required |
+| Ignore hidden files | Checkbox | Optional |
+
+## Actions
+
+### Create File from Text
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File Path | Short text | Required |
+| File Content | Short text | Required |
+
+### Read File Content
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File Path | Short text | Required |
+
+# SimplePDF
+
+## Trigger
+
+### New Submission
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Markdown | Short text | Required |
+
+# Slack
+
+## Triggers
+
+### New Message
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Channel | Dropdown | Required |
+
+### New Reaction
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Emojis (E.g fire, smile) | Array | Optional |
+
+## Actions
+
+### Send Message To A User
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| User | Dropdown | Required |
+| Message | Short text | Required |
+| Username | Short text | Optional |
+| Profile Picture | Short text | Optional |
+
+### Send Message To A Channel
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Channel | Dropdown | Required |
+| Message | Short text | Required |
+| Username | Short text | Optional |
+| Profile Picture | Short text | Optional |
+
+### Request Approval from A User
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| User | Dropdown | Required |
+| Message | Short text | Required |
+| Username | Short text | Optional |
+| Profile Picture | Short text | Optional |
+
+### Request Approval in a Channel
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Channel | Dropdown | Required |
+| Message | Short text | Required |
+| Username | Short text | Optional |
+| Profile Picture | Short text | Optional |
+
+### Request Action from A User
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| User | Dropdown | Required |
+| Message | Short text | Required |
+| Action Buttons | Array | Required |
+| Username | Short text | Optional |
+| Profile Picture | Short text | Optional |
+
+### Request Action in A Channel
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Channel | Dropdown | Required |
+| Message | Short text | Required |
+| Action Buttons | Array | Required |
+| Username | Short text | Optional |
+| Profile Picture | Short text | Optional |
+
+# SMTP
+
+## Actions
+
+### Send Email
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| From | Short text | Required |
+| To  | Array | Required |
+| CC  | Array | Optional |
+| Reply To | Short text | Optional |
+| BCC | Array | Optional |
+| Subject | Short text | Required |
+| Body | Short text | Required |
+
+# SOAP
+
+## Actions
+
+### Call SOAP Method
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| WSDL URL | Short text | Required |
+| Method | Dropdown | Required |
+| Parsed | Checkbox | Optional |
+
+# Spotify
+
+## Triggers
+
+### Playlist Items Changed
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Playlist | Dropdown | Required |
+
+## Actions
+
+### Search
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Search Text | Short text | Required |
+| Object Types | Dropdown | Required |
+| Limit | Number | Optional |
+| Offset | Number | Optional |
+
+### Get Playback State
+
+No parameters.
+
+### Play / Resume
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Device | Dropdown | Optional |
+| Context URI | Short text | Optional |
+| Tracks | Array | Optional |
+| Position | Number | Optional |
+
+### Pause
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Device | Dropdown | Optional |
+
+### Set Volume
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Volume | Number | Required |
+| Device | Dropdown | Optional |
+
+### Get Playlists
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Limit | Number | Optional |
+| All | Checkbox | Optional |
+
+### Get Playlist Info
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Playlist | Dropdown | Required |
+
+### Get Playlist Items
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Playlist | Dropdown | Required |
+| Limit | Number | Optional |
+| All | Checkbox | Optional |
+
+### Create Playlist
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Description | Short text | Optional |
+| Public | Checkbox | Optional |
+| Collaborative | Checkbox | Optional |
+
+### Update Playlist
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Playlist | Dropdown | Required |
+| Name | Short text | Optional |
+| Description | Short text | Optional |
+| Public | Checkbox | Optional |
+| Collaborative | Checkbox | Optional |
+
+### Add Items to Playlist
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Playlist | Dropdown | Required |
+| Items | Array | Required |
+| Position | Number | Optional |
+
+### Remove items from a Playlist
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Playlist | Dropdown | Required |
+| Items | Array | Required |
+
+### Reorder Playlist
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Playlist | Dropdown | Required |
+| From Position | Number | Required |
+| To Position | Number | Required |
+| Amount of Items | Number | Optional |
+
+# square
+
+## Triggers
+
+### New Order
+
+No parameters.
+
+### Order Updated
+
+No parameters.
+
+### New Customer
+
+No parameters.
+
+### Customer Updated
+
+No parameters.
+
+### New Appointment
+
+No parameters.
+
+### New Payment
+
+No parameters.
+
+### New Invoice
+
+No parameters.
+
+# Stability AI
+
+## Actions
+
+### Text to Image
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Prompt | Short text | Required |
+| cfg\_scale | Number | Optional |
+| height | Number | Optional |
+| width | Number | Optional |
+| samples | Short text | Optional |
+| steps | Number | Optional |
+| weight | Number | Optional |
+| clip-guidance-preset | Dropdown | Optional |
+| style\_preset | Dropdown | Optional |
+| Engine ID | Dropdown | Required |
+
+# Storage
+
+## Actions
+
+### Get
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Key | Short text | Required |
+| Default Value | Short text | Optional |
+| Store Scope | Dropdown | Required |
+
+### Put
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Key | Short text | Required |
+| Value | Short text | Required |
+| Store Scope | Dropdown | Required |
+
+### Append
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Key | Short text | Required |
+| Value | Short text | Required |
+| Separator | Short text | Optional |
+| Store Scope | Dropdown | Required |
+
+### Remove
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Key | Short text | Required |
+| Store Scope | Dropdown | Required |
+
+### Add To List
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Key | Short text | Required |
+| Value | Short text | Required |
+| Ignore if value exists | Checkbox | Optional |
+| Store Scope | Dropdown | Required |
+
+### Remove From List
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Key | Short text | Required |
+| Value | Short text | Required |
+| Store Scope | Dropdown | Required |
+
+# Stripe
+
+## Triggers
+
+### New Payment
+
+Instant. No parameters.
+
+### New Customer
+
+Instant. No parameters.
+
+### Payment Filed
+
+Instant. No parameters.
+
+### New Subscription
+
+Instant. No parameters.
+
+## Action
+
+### Create Customer
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| Name | Short text | Required |
+| Description | Short text | Optional |
+| Phone | Short text | Optional |
+| Address Line 1 | Short text | Optional |
+| Postal Code | Short text | Optional |
+| City | Short text | Optional |
+| State | Short text | Optional |
+| Country | Short text | Optional |
+
+### Create Invoice
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Customer ID | Short text | Required |
+| Currency | Short text | Required |
+| Description | Short text | Optional |
+
+### Search Customer
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+
+# Supabase
+
+## Actions
+
+### Upload File
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| File Path | Short text | Required |
+| Bucket | Short text | Required |
+| Base64 or URL | File | Required |
+
+# SurveyMonkey
+
+## Triggers
+
+### New Response
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Survey | Dropdown | Required |
+
+# Tags
+
+## Actions
+
+### Add Tag
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Markdown | Short text | Required |
+| Tag Name | Short text | Required |
+
+# Talkable
+
+## Actions
+
+### Find person
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Person email | Short text | Required |
+| Scope | Dropdown | Required |
+| No Error On Failure | Checkbox | Optional |
+
+### Find coupon
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Coupon code | Short text | Required |
+| No Error On Failure | Checkbox | Optional |
+
+### Update person
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Person email | Short text | Required |
+| Person first name | Short text | Optional |
+| Persona last name | Short text | Optional |
+| Person phone number | Short text | Optional |
+| Person username | Short text | Optional |
+| Customer ID | Number | Optional |
+| Custom properties | JSON | Optional |
+| Opt-in status | Checkbox | Optional |
+| Unsubscribe status | Checkbox | Optional |
+| Unsubscribed date | Datetime | Optional |
+| No Error On Failure | Checkbox | Optional |
+
+### Anonymize person
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Person email | Short text | Required |
+| No Error On Failure | Checkbox | Optional |
+
+### Unsubscribe person
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Person email | Short text | Required |
+| No Error On Failure | Checkbox | Optional |
+
+### Create purchase
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| Order number | Short text | Required |
+| Subtotal | Number | Required |
+| First name | Short text | Optional |
+| Last name | Short text | Optional |
+| Username | Short text | Optional |
+| Customer id | Short text | Optional |
+| Custom properties | JSON | Optional |
+| Phone number | Short text | Optional |
+| Campaign tags | Short text | Optional |
+| Sharing channels | Array | Optional |
+| IP address | Short text | Optional |
+| UUID | Short text | Optional |
+| Created at | Short text | Optional |
+| Traffic source | Short text | Optional |
+| Coupon codes | Array | Optional |
+| Currency iso code | Short text | Optional |
+| Shipping address | Short text | Optional |
+| Shipping zip | Short text | Optional |
+| Items | JSON | Optional |
+| No Error On Failure | Checkbox | Optional |
+
+### Create batch of purchases
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Create offers | Checkbox | Optional |
+| Purchases | JSON | Optional |
+| No Error On Failure | Checkbox | Optional |
+
+### Create event
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Email | Short text | Required |
+| Event category | Short text | Required |
+| Event number | Short text | Required |
+| Subtotal | Number | Required |
+| First name | Short text | Optional |
+| Last name | Short text | Optional |
+| Username | Short text | Optional |
+| Customer id | Short text | Optional |
+| Custom properties | JSON | Optional |
+| Phone number | Short text | Optional |
+| Campaign tags | Short text | Optional |
+| Sharing channels | Array | Optional |
+| IP address | Short text | Optional |
+| UUID | Short text | Optional |
+| Created at | Short text | Optional |
+| Traffic source | Short text | Optional |
+| Coupon codes | Array | Optional |
+| Currency iso code | Short text | Optional |
+| Shipping address | Short text | Optional |
+| Shipping zip | Short text | Optional |
+| Items | JSON | Optional |
+| No Error On Failure | Checkbox | Optional |
+
+### Create batch of events
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Create offers | Checkbox | Optional |
+| Events | JSON | Optional |
+| No Error On Failure | Checkbox | Optional |
+
+### Refund purchase/event
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Order or event number | Short text | Required |
+| Refund subtotal | Number | Optional |
+| Refunded date | Datetime | Optional |
+| No Error On Failure | Checkbox | Optional |
+
+### Get loyalty actions
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Person email | Short text | Required |
+| No Error On Failure | Checkbox | Optional |
+
+### Update referral status
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Order or event number | Short text | Required |
+| Status | Dropdown | Required |
+| No Error On Failure | Checkbox | Optional |
+
+# Tally
+
+## Triggers
+
+### New Submission
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Markdown | Short text | Required |
+
+# Telegram bot
+
+## Triggers
+
+### New Message
+
+Instant. No parameters.
+
+## Actions
+
+### Send Text Message
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Markdown | Short text | Required |
+| Chat id | Short text | Required |
+| Message Thread Id | Short text | Required |
+| Format | Dropdown | Optional |
+| Message | Short text | Required |
+
+# Text Helper
+
+## Actions
+
+### Concatenate
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Texts | Array | Required |
+| Separator | Short text | Optional |
+
+### Replace
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Text | Short text | Required |
+| Search Value | Short text | Required |
+| Replace Value | Short text | Required |
+
+### Split
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Text | Short text | Required |
+| Delimiter | Short text | Required |
+
+### Find
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Text | Short text | Required |
+| Expression | Short text | Required |
+
+# Tidycal
+
+## Triggers
+
+### Booking Canceled
+
+Scheduled. No parameters.
+
+### New Booking
+
+Scheduled. No parameters.
+
+### New Contact
+
+Scheduled. No parameters.
+
+# Todoist
+
+## Triggers
+
+### Task Completed
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Project | Dropdown | Optional |
+
+## Actions
+
+### Create Task
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Project | Dropdown | Optional |
+| Content | Short text | Required |
+| Description | Short text | Optional |
+| Labels | Array | Optional |
+| Priority | Number | Optional |
+| Due date | Short text | Optional |
+
+# Trello
+
+## Triggers
+
+### Card Moved to list
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Boards | Dropdown | Required |
+| Lists | Dropdown | Required |
+
+### New Card
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Boards | Dropdown | Required |
+| Lists | Dropdown | Required |
+
+## Actions
+
+### Create Card
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Boards | Dropdown | Required |
+| Lists | Dropdown | Required |
+| Task Name | Short text | Required |
+| Task Description | Short text | Optional |
+
+### Get Card
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Card ID | Short text | Required |
+
+# Twilio
+
+## Triggers
+
+### New Incoming SMS
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| From | Dropdown | Required |
+
+## Actions
+
+### Send SMS
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| From | Dropdown | Required |
+| Message Body | Short text | Required |
+| To  | Short text | Required |
+
+# Twitter
+
+## Actions
+
+### Create Tweet
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Text | Short text | Required |
+| Media | File | Optional |
+
+# Typeform
+
+## Triggers
+
+### New Submission
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Form | Dropdown | Required |
+
+# VTEX
+
+## Actions
+
+### Get Product By ID
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Product ID | Number | Required |
+
+### Create New Product
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Title | Short text | Required |
+| Description | Short text | Required |
+| Brand ID | Number | Required |
+| Category ID | Number | Required |
+| Link ID | Short text | Optional |
+| Ref ID | Short text | Optional |
+| Product ID | Number | Optional |
+| Is Visible | Checkbox | Optional |
+| Short Description | Short text | Optional |
+| Release Date | Short text | Optional |
+| Key Words | Short text | Optional |
+| Is Active | Checkbox | Optional |
+| Tax Code | Short text | Optional |
+| Metatag description | Short text | Optional |
+| Show Without Stock | Checkbox | Optional |
+| Score | Number | Optional |
+
+### Update a Product
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Product ID | Number | Required |
+| Name | Short text | Required |
+| Title | Short text | Required |
+| Description | Short text | Required |
+| Brand ID | Number | Required |
+| Category ID | Number | Required |
+| DepartmentId | Number | Required |
+| Link ID | Short text | Optional |
+| Ref ID | Short text | Optional |
+| Is Visible | Checkbox | Optional |
+| Short Description | Short text | Optional |
+| Release Date | Short text | Optional |
+| Key Words | Short text | Optional |
+| Is Active | Checkbox | Optional |
+| Tax Code | Short text | Optional |
+| Metatag description | Short text | Optional |
+| Show Without Stock | Checkbox | Optional |
+| Score | Number | Optional |
+
+### Get Brand List
+
+No parameters.
+
+### Get Brand By ID
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Brand ID | Number | Required |
+
+### Create new Brand
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Name | Short text | Required |
+| Site Title | Short text | Optional |
+| Link ID | Short text | Optional |
+| Brand ID | Number | Optional |
+| Text | Short text | Optional |
+| Menu Home | Checkbox | Optional |
+| Keywords | Short text | Optional |
+| Active | Checkbox | Optional |
+| Score | Number | Optional |
+
+### Update Brand
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Brand ID | Number | Required |
+| Name | Short text | Required |
+| Site Title | Short text | Required |
+| Link ID | Short text | Required |
+| Text | Short text | Required |
+| Menu Home | Checkbox | Required |
+| Keywords | Short text | Required |
+| Active | Checkbox | Required |
+| Score | Number | Required |
+
+### Delete Brand
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Brand ID | Number | Required |
+
+### Get Category
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Category ID | Number | Required |
+
+### Get SKU By Product ID
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Product ID | Number | Required |
+
+### Create New Sku
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Product ID | Number | Required |
+| SKU Name | Short text | Required |
+| Package Height | Number | Required |
+| Package Length | Number | Required |
+| Package Width | Number | Required |
+| Package Weight (Kg) | Number | Required |
+| Is Active | Checkbox | Optional |
+| Is Kit | Checkbox | Optional |
+| Sku ID | Number | Optional |
+
+### Create New Sku File
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Sku ID | Number | Required |
+| Image Url | Short text | Required |
+| Image Name | Short text | Required |
+| Is Main Image | Checkbox | Required |
+| Image Label | Short text | Optional |
+
+### Get Client List
+
+No parameters.
+
+### Get Client By ID
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Client ID | Number | Required |
+
+### Get Order By ID
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Order ID | Number | Required |
+
+### Get Orders List
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| From (Year) | Number | Required |
+| To (Year) | Short text | Required |
+| From (Month) | Short text | Optional |
+| To (Month) | Short text | Optional |
+| From (Day) | Short text | Optional |
+| To (Day) | Short text | Optional |
+
+# Webflow
+
+## Triggers
+
+### New Submission
+
+Instant.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Site | Dropdown | Required |
+| Form Name | Short text | Optional |
+
+# Webhook
+
+## Triggers
+
+### Webhook
+
+Instant. No Parameters.
+
+# WooCommerce
+
+## Triggers
+
+### Customer
+
+Instant. No Parameters.
+
+### Coupon
+
+Instant. No Parameters.
+
+### Order
+
+Instant. No Parameters.
+
+### Product
+
+Instant. No Parameters.
+
+### Line Item in Order
+
+Instant. No Parameters.
+
+# Wordpress
+
+## Triggers
+
+### New Post
+
+Scheduled.
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Authors | Dropdown | Optional |
+
+## Actions
+
+### Create Post
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Title | Short text | Required |
+| Content | Short text | Required |
+| Slug | Short text | Optional |
+| Date | Short text | Optional |
+| Featured Media (URL) | File | Optional |
+| Tags | Dropdown | Optional |
+| Categories | Dropdown | Optional |
+| Featured Media (image) | Dropdown | Optional |
+| Status | Dropdown | Optional |
+| Excerpt | Short text | Optional |
+| Enable Comments | Checkbox | Optional |
+| Open to Pinging | Checkbox | Optional |
+
+### Create Page
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Title | Short text | Required |
+| Content | Short text | Required |
+| Slug | Short text | Optional |
+| Date | Short text | Optional |
+| Status | Dropdown | Optional |
+| Excerpt | Short text | Optional |
+| Enable Comments | Checkbox | Optional |
+| Open to Pinging | Checkbox | Optional |
+
+# Xero
+
+## Actions
+
+### Create or Update Contact
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Organization | Dropdown | Required |
+| Contact ID | Short text | Optional |
+| Contact Name | Short text | Required |
+| Contact Email | Short text | Optional |
+
+### Create or Update Invoice
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Organization | Dropdown | Required |
+| Invoice ID | Short text | Optional |
+| Contact ID | Short text | Optional |
+| Contact Name | Short text | Required |
+| Contact Email | Short text | Optional |
+| Line Item | JSON | Required |
+| Date Prepared | Short text | Optional |
+| Due Date | Short text | Required |
+| Invoice Reference | Short text | Optional |
+| Status | Dropdown | Required |
+
+# XML
+
+## Actions
+
+### Convert JSON to XML
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| JSON | JSON | Required |
+| Attribute field | Short text | Optional |
+| Header | Checkbox | Optional |
+
+# YouTube
+
+## Triggers
+
+### New Video In Channel
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Channel ID, URL, or handle | Short text | Required |
+
+# Zendesk
+
+## Triggers
+
+### New ticket in view
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| View | Dropdown | Required |
+
+# Zoho CRM
+
+## Triggers
+
+### New Contact
+
+Scheduled. No parameters.
+
+# Zoho Invoice
+
+## Triggers
+
+### New Invoice
+
+Scheduled. No parameters.
+
+# Zoom
+
+## Actions
+
+### Create Zoom Meeting
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Meeting's topic | Short text | Required |
+| Start Time | Short text | Optional |
+| Duration (in Minutes) | nUMBER | Optional |
+| Agenda | Short text | Optional |
+| Password | Short text | Optional |
+| Pre Schedule | Checkbox | Optional |
+| Schedule for | Short text | Optional |
+| Join URL | Short text | Optional |
+
+### Create Zoom Meeting Registrant
+
+| Parameter | Data type | Condition |
+| --- | --- | --- |
+| Meeting ID | Short text | Required |
+| First name | Short text | Required |
+| Last name | Short text | Optional |
+| Email | Short text | Required |
+| Address | Short text | Optional |
+| City | Short text | Optional |
+| State | Short text | Optional |
+| Zip | Short text | Optional |
+| Country | Short text | Optional |
+| Phone | Short text | Optional |
+| Comments | Short text | Optional |
+| Custom questions | JSON | Optional |
+| Industry | Short text | Optional |
+| Job title | Short text | Optional |
+| No of employees | Short text | Optional |
+| Organization | Short text | Optional |
+| Purchasing time frame | Short text | Optional |
+| Role in purchase process | Short text | Optional |
+
