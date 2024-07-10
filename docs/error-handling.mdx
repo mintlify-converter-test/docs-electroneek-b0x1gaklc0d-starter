@@ -1,0 +1,14 @@
+---
+title: "Error Handling"
+description: "Error Handling conceptual definition in Studio Pro workflows."
+---
+Error handling is an essential concept in programming, since we can never predict 100% of possible scenarios when building a bot or any application. Therefore, Studio Pro has the tools you need to create your own strategy to ensure your workflow is running accurately and smoothly.
+
+The basic idea is that you can define **exceptions** in the logic of your workflow, so it can manage them to keep working without interruption. So, if a crucial step of your bot does not work for some reason — for the lack of internet connection or a file is not found, for example —, it is natural that the bot stops with an error message.
+
+However, **minor issues** such as a less important variable that gets no result should not stop your workflow. Studio Pro allows you to indicate, for each activity, what specific processes you want to treat as an exception. So, in case the activity does not work, you define a secondary action to happen — and the workflow just keeps running properly.
+
+In the example above, a variable that gets no result would trigger another action — let's say, a console message to the user — and the next activity works normally. Hence, the bot still works and you get a log history of unexpected events.
+
+As you can see, error handling means you are in charge of how your bots respond to different scenarios, even when something unpredictable occurs.
+
