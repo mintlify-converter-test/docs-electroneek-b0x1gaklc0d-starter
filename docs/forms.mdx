@@ -1,0 +1,156 @@
+---
+title: "Forms"
+---
+  
+
+# Overview
+
+Forms are the interaction with the humans in Process Hub. Create a Form whenever you need a human to introduce information, review, and make decisions like Approvals.
+
+The Form Builder has an easy-to-use drag-and-drop user interface where you can build custom forms. Some characteristics of it are:
+
+*   Question Types  
+    Forms offer all types of questions you’d expect, from a simple text entry field and checkboxes to a dynamic matrix table with various input types. Users can add a special container for questions called a Panel to modify several questions at once easily.
+*   Logic  
+    The user can write expressions to change the visibility of Form elements, enable or disable them, or make elements required or unrequired.
+*   Text Formatting  
+    You can use simple Markdown syntax to format the text of your questions and choice options.
+*   Questions  
+    In many cases, the Form question models have to be dynamic having the data received from different stages in the Process.
+*   Complex Forms  
+    With Forms you can build multi-page forms of any complexity. Whether you need to implement a duplicate group option to enable respondents to add a fresh copy of the same form fields or section on the fly, build an order form that calculates the total based on chosen items and quantities, or personalize the form flow with different subsequent question variations
+
+# Getting Started
+
+  
+
+## Who can create Forms?
+
+Only users with the Admin or Process Manager role in Process Hub can create or edit Forms.
+
+## Create a Form
+
+1- To create a Form, go to the Forms section in Process Hub and click the “Create” button.
+
+2- After you have clicked on the button, provide a Title for the form and click “Save”. This Title will be visible in the Form and can be changed later.
+
+  
+<img className="block" src="images/files_readme_io/_14fb0fc_PH___Form_creation.gif" alt="Alt text" />
+
+3- The Form builder will open. Make sure you are in the Design tab.
+
+4- Start adding questions by dragging and dropping the elements from the left list which contains a lot of different options.
+
+5- For each question, set up the properties in the right panel to customize it.
+
+**IMPORTANT**: The “**Name**” field in the Questions properties will act as a variable for the process. That means you’ll use this value to reference the answer in future process stages. As a best practice use unique names without spaces.
+
+  
+<img className="block" src="images/files_readme_io/_14d17bb_From___Properties_Tab.jpg" alt="Alt text" />  
+
+6- At any time, you can preview your form by clicking on the “Preview” tab of the Form Builder.
+
+<img className="block" src="images/files_readme_io/_75ba678_From___Preview_Tab.jpg" alt="Alt text" />
+
+7- Once completed, click the “Save” button.
+
+8- The new form should now be visible in the Forms section of Process Hub.
+
+## Add dynamic data to your form
+
+There are plenty of use cases where you will be required to present data gathered at other stages of the process. One example of a use case would be the Approval stages where the approval must review data before approving or rejecting an operation.
+
+To add data from other stages you need to:  
+1- Know the variable name used to store the data.  
+2- Add the variable name in any part of your form between double hashtags (##variable\_name##).
+
+It is recommended to use the “Input area placeholder” to display data in a Question.
+
+  
+<img className="block" src="images/files_readme_io/_1ce8dfd_From___Dynamic_Form.jpg" alt="Alt text" />  
+
+## Using the Dropdown type of questions
+
+It is important to explain how the values are used in other stages when reading the answer to a Dropdown type question.
+
+This Question type allows the Process Manager to specify a list of items which the user can choose from. When configuring the items in the “Choices” attribute for the question, complete them carefully as the Item name and the Item value can be different.
+
+  
+<img className="block" src="images/files_readme_io/_ece69c6_From___Dropdown_1.jpg" alt="Alt text" />
+
+The first Column is the Value that will be effective and available in the Variable when answered and the second column is the value displayed in the question. As best practice to avoid confusion complete with the same value in both columns for each Item as shown in the example below:
+
+  
+<img className="block" src="images/files_readme_io/_9d7d4cf_From___Dropdown_2.jpg" alt="Alt text" />  
+
+## Question types
+
+Here's an overview of common question types available in the form builder along with guidance on how they should be used:
+
+1.  **Multiple Choice (Single Select):**
+    
+    *   Use when respondents should select only one option from a list.
+    *   Ideal for questions with mutually exclusive answer choices, such as "What is your preferred method of communication?"
+2.  **Multiple Choice (Multiple Select):**
+    
+    *   Allows respondents to select multiple options from a list.
+    *   Suitable for questions where more than one answer may apply, such as "Which of the following features do you use regularly?"
+3.  **Dropdown List**:
+    
+    *   Presents a list of options in a dropdown menu format.
+    *   Use for questions with a long list of options or when space is limited on the form.
+4.  **Rating Scale**:
+    
+    *   Asks respondents to rate something on a scale (e.g., from 1 to 5 stars).
+    *   Useful for gathering feedback on satisfaction levels, product ratings, or likeliness to recommend.
+5.  **Likert Scale**:
+    
+    *   Measures respondent agreement or disagreement with statements on a scale.
+    *   Use for opinion-based questions where you want to gauge attitudes or perceptions.
+6.  **Text Input (Single Line):**
+    
+    *   Provides a single-line text box for short answers (e.g., name, email, phone number).
+    *   Suitable for collecting basic contact information or short responses.
+7.  **Text Input (Paragraph)**:
+    
+    *   Offers a larger text box for longer answers or comments.
+    *   Use when respondents need to provide detailed feedback, explanations, or open-ended responses.
+8.  **Date Picker:**
+    
+    *   Allows respondents to select a date from a calendar widget.
+    *   Ideal for questions related to scheduling, event dates, or birthdates.
+9.  **File Upload:**
+    
+    *   Lets respondents upload files or documents.
+    *   Use when collecting resumes, images, documents, or any other files from respondents.
+10.  **Matrix/Rating Matrix:**
+    
+    *   Organizes questions in a grid format with rows and columns.
+    *   Suitable for presenting a set of related questions with common answer options.
+11.  **Slider:**
+    
+    *   Enables respondents to select a value by sliding a handle along a numeric scale.
+    *   Use for questions where you want respondents to indicate a range or level, such as satisfaction levels or likelihood ratings.
+12.  **Net Promoter Score (NPS):**
+    
+    *   Measures customer loyalty and satisfaction by asking respondents to rate how likely they are to recommend a product or service.
+    *   Typically presented on a scale from 0 to 10, with respondents categorized as Promoters, Passives, or Detractors.
+13.  **Ranking:**
+    
+    *   Asks respondents to rank items in order of preference or importance.
+    *   Use when you need to prioritize choices or understand preferences among a list of items.
+14.  **Numeric Input:**
+    
+    *   Provides a text box for numeric entries.
+    *   Suitable for questions involving quantities, ages, ratings, or any other numeric data.
+15.  **Constant Sum:**
+    
+    *   Requires respondents to allocate a fixed sum across multiple options.
+    *   Use for questions where respondents need to distribute points, budget allocations, or resources.
+16.  **Signature Capture:**
+    
+    *   Allows respondents to digitally sign the form using a mouse, stylus, or touchscreen.
+    *   Useful for capturing signatures on agreements, contracts, or consent forms.
+
+When choosing question types, consider the nature of the information you want to collect, respondent preferences, survey length, and the clarity of the questions. Combining various question types can create a well-rounded and engaging form experience for your audience.
+
