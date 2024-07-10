@@ -1,0 +1,382 @@
+---
+title: "Cheat Sheet"
+description: "Studio Pro activities definition."
+---
+# General
+
+## Logic
+
+| Activity | Definition |
+| --- | --- |
+| [**Assign value to variable**](/docs/logic#assign-value-to-variable) | Create and modify variables |
+| [**If... then**](/docs/logic#if-then) | Apply business logic and define conditions to perform actions |
+| [**Do-while loop**](/docs/logic#do-while-loop) | Build repetitive operations using the while loop programming concept |
+| [**Subprogram**](/docs/logic#subprogram) | Trigger another workflow from the current one |
+| [**Delay**](/docs/logic#delay) | Define a timeout to execute the next step of the workflow |
+| [**Log**](/docs/logic#log) | Save written data from the workflow in a text file |
+| [**Console log**](/docs/logic#console-log) | Print a message to the Studio Pro console |
+| [**Open Application**](/docs/logic#open-application) | Select a desktop application to be opened by the workflow |
+| [**TODO**](/docs/logic#todo) | Add an informative text block to your workflow |
+
+## Human in the loop
+
+| Activity | Definition |
+| --- | --- |
+| [**User notification**](/docs/human-in-the-loop#user-notification) | Set up a pop-up window with a custom message |
+| [**Select file or folder**](/docs/human-in-the-loop#select-file-or-folder) | Ask users for a path to access a file or folder |
+| [**Input dialog**](/docs/human-in-the-loop#input-dialog) | Allow users to add text to a variable via dialog window or to add a preset message |
+
+## Block input
+
+| Activity | Definition |
+| --- | --- |
+| [**Block input**](/docs/block-input-1#block-input) | Disable a specific input from mouse or keyboard |
+| [**Unblock input**](/docs/block-input-1#unblock-input) | Cancel the effect of "Block input" |
+
+# AI Activities
+
+| Activity | Definition |
+| --- | --- |
+| [**Ask AI**](/docs/ask-ai) | Interact with OpenAI Artificial Intelligence, ask questions and retrieve answers in seconds |
+| [**Edit text**](/docs/edit-text) | Manipulate text in your workflows easily with the assistance of OpenAI Artificial Intelligence |
+
+# OS Automation
+
+## File&Folders
+
+| Activity | Definition |
+| --- | --- |
+| [**Read text file**](/docs/filefolders#read-text-file) | Add block to read a text file |
+| [**Append to file**](/docs/filefolders#append-to-file) | Insert text to a specific file |
+| [**Copy file**](/docs/filefolders#copy-file) | Copy a file from a directory |
+| [**Create file**](/docs/filefolders#create-file) | Create a new file in a specific directory |
+| [**Delete file**](/docs/filefolders#delete-file) | Select a specific file to be deleted |
+| [**File found?**](/docs/filefolders#file-found) | Set the bot to perform an action in case a specific file exists |
+| [**File information**](/docs/filefolders#file-information) | Extract information from a file |
+| [**Move file**](/docs/filefolders#move-file) | Move a file to a specific directory |
+| [**Overwrite file**](/docs/filefolders#overwrite-file) | Delete content from a file and write a new text to it |
+| [**List directory files**](/docs/filefolders#list-directory-files) | Extract names of all files from a directory and stores them in an array |
+| [**Create directory**](/docs/filefolders#create-directory) | Create a folder in a specific directory |
+| [**Zip files**](/docs/filefolders#zip-files) | Compress a file or folder and add it to an archive |
+| [**Unzip files**](/docs/filefolders#unzip-files) | Extract files from a compacted archive |
+| [**File trigger**](/docs/filefolders#file-trigger) | Monitor a folder to execute an action in case a specific file appears |
+
+## Credentials
+
+| Activity | Definition |
+| --- | --- |
+| [**Get password**](/docs/credentials#get-password) | Import password from one of your accounts in Studio Pro Settings and use them to log in to a web service (e.g. Gmail) |
+| [**Get username**](/docs/credentials#get-username) | Import credentials from one of your accounts in Studio Pro Settings and use them to log in to a web service (e.g. Gmail) |
+
+## Clipboard
+
+| Activity | Definition |
+| --- | --- |
+| [**Read clipboard**](/docs/clipboard#read-clipboard) | Save the content from clipboard to a file |
+| [**Clear clipboard**](/docs/clipboard#clear-clipboard) | Erase all content from clipboard |
+| [**Copy to clipboard**](/docs/clipboard#copy-to-clipboard) | Copy values to clipboard |
+
+## System
+
+| Activity | Definition |
+| --- | --- |
+| [**Shutdown computer**](/docs/system#shutdown-computer) | Log off, restart, or turn off the computer |
+| [**Process found?**](/docs/system#process-found) | Execute an action in case a specific process is running — and another action in case it is not |
+| [**Kill process**](/docs/system#kill-process) | Stop a specific process |
+| [**Command Prompt**](/docs/system#command-prompt) | Execute a process using the terminal in the background |
+
+# GUI Automation
+
+## Mouse
+
+| Activity | Definition |
+| --- | --- |
+| [**Click on element**](/docs/mouse#click-on-element) | Choose a desktop element to click on it |
+| [**Click on coordinate**](/docs/mouse#click-on-coordinate) | Click on a specific point in the screen |
+| [**Read checkbox state**](/docs/mouse#read-checkbox-state) | Get the value from a specific checkbox |
+| [**Set checkbox state**](/docs/mouse#set-checkbox-state) | Set the state of a specific checkbox |
+| [**Select list item**](/docs/mouse#select-list-item) | Choose an item from a drop-down list |
+
+## Keyboard
+
+| Activity | Definition |
+| --- | --- |
+| [**Input to desktop app**](/docs/keyboard#input-to-desktop-app) | Type a text into a desktop app |
+| [**Send hotkey**](/docs/keyboard#send-hotkey) | Simulate pressing a hotkey or a key combination |
+
+## UI
+
+| Activity | Definition |
+| --- | --- |
+| [**Get element property**](/docs/ui#get-element-property) | Select an item to extract its value |
+| [**Get element value**](/docs/ui#get-element-value) | Choose an element to obtain its value |
+| [**Get position**](/docs/ui#get-position) | Choose an element to obtain its size and coordinates |
+| [**Set element value**](/docs/ui#set-element-value) | Change the value of a given element |
+| [**Element found?**](/docs/ui#element-found) | Check if a specific element exists — and trigger an action if it does |
+| [**Wait for element**](/docs/ui#wait-for-element) | Execute an action if an element appears after a given amount of time |
+| [**Wait for vanishing**](/docs/ui#wait-for-vanishing) | Execute an action if an element disappears after a given amount of time |
+
+## App Window
+
+| Activity | Definition |
+| --- | --- |
+| [**Maximize element**](/docs/app-window#maximize-element) | Set an application window to its maximum size |
+| [**Minimize element**](/docs/app-window#minimize-element) | Minimize all application windows |
+| [**Activate element**](/docs/app-window#activate-element) | Bring a specific element to the foreground |
+| [**Close window**](/docs/app-window#close-window) | Close a specific application |
+
+## Machine vision
+
+| Activity | Definition |
+| --- | --- |
+| [**Click on image**](/docs/machine-vision#click-on-image) | Find an image on the screen and click on it |
+| [**Find image**](/docs/machine-vision#find-image) | Find an image on the screen and get its coordinate |
+| [**Take a screenshot**](/docs/machine-vision#take-a-screenshot) | Capture the image of the entire screen |
+| [**Wait for image**](/docs/machine-vision#wait-for-image) | Define a time limit to wait for a specific image to appear on the screen |
+
+# Web Automation
+
+## Web Browser
+
+| Activity | Definition |
+| --- | --- |
+| [**Open URL**](/docs/web-browser#open-url) | Open a new web browser window |
+| [**Close browser**](/docs/web-browser#close-browser) | Close the browser opened |
+| [**Find iframe**](/docs/web-browser#find-iframe) | HTML element that is able to load another HTML element |
+| [**Execute JavaScript**](/docs/web-browser#execute-javascript) | Execute separately written JavaScript code |
+| [**Scrape structured data**](/docs/web-browser#scrape-structured-data) | Extract data according to a given structure |
+
+# Mouse
+
+| Activity | Definition |
+| --- | --- |
+| [**Click on element**](/docs/mouse-1#click-on-element) | Simulates clicking a specific browser element |
+| [**Hover over element**](/docs/mouse-1#hover-over-element) | Hovers the mouse cursor over the specified element |
+| [**Drag and drop element**](/docs/mouse-1#drag-and-drop-element) | Simulates drag and drop of a web page element |
+| [**Select List Item**](/docs/mouse-1#select-list-item) | Select a specific item in a dropdown list |
+
+# Keyboard
+
+| Activity | Definition |
+| --- | --- |
+| [**Input to browser**](/docs/keyboard-1#input-to-browser) | Input some text into browser elements |
+| [**Send Hotkeys**](/docs/keyboard-1#send-hotkeys) | Simulate pressing a hotkey or a key combination |
+
+# UI
+
+| Activity | Definition |
+| --- | --- |
+| [**Get Element Property**](/docs/ui-1#get-element-property) | Reads attributes of a specified element |
+| [**Get Element Value**](/docs/ui-1#get-element-value) | Reads the value attribute or the text between tags |
+| [**Set Element Value**](/docs/ui-1#set-element-value) | Sets the 'value' attribute of the specified element |
+| [**Set Element Property**](/docs/ui-1#set-element-property) | Sets a certain property of the specified element |
+| [**Element found?**](/docs/ui-1#element-found) | Checks whether the element exists |
+| [**Wait for element**](/docs/ui-1#wait-for-element) | Wait until the element is loaded |
+| [**Wait for vanishing**](/docs/ui-1#wait-for-vanishing) | Waits for web element to disappear for specified amount of time |
+
+# Programming
+
+## Strings
+
+| Activity | Definition |
+| --- | --- |
+| [**Text found?**](/docs/strings#text-found) | Searches through a text and check if it contains a string |
+| [**Extract text**](/docs/strings#extract-text) | Extract portions of text placed between the specified words |
+
+## Dates and time
+
+| Activity | Definition |
+| --- | --- |
+| [**Get current date**](/docs/dates-and-time#get-current-date) | Get the current date according to the system time |
+| [**Calculate date**](/docs/dates-and-time#calculate-date) | Calculates a date and time using given date and a delta |
+| [**Calculate difference**](/docs/dates-and-time#calculate-difference) | Calculates the difference between two dates |
+| [**Export to format**](/docs/dates-and-time#export-to-format) | Convert date and time into a specific format |
+| [**Time trigger**](/docs/dates-and-time#time-trigger) | Execute further steps of the workflow when a certain time arrives |
+
+## API
+
+| Activity | Definition |
+| --- | --- |
+| [**HTTP request**](/docs/api#http-request) | Sends an HTTP request with the specified parameters |
+| [**Get OAuth token**](/docs/api#get-oauth-token) | Performs an OAuth 2.0 authorization |
+
+## Databases
+
+| Activity | Definition |
+| --- | --- |
+| [**Connect to Database**](/docs/databases#connect-to-database) | Establish the connection to DBMS |
+| [**Execute query**](/docs/databases#execute-query) | Executes a database query |
+
+## Others
+
+| Activity | Definition |
+| --- | --- |
+| [**Execute JS code**](/docs/others#execute-js-code) | Run JavaScript code in Studio Pro |
+| [**Execute Python**](/docs/others#execute-python) | Run Python code in Studio Pro |
+
+# Spreadsheets
+
+## Tables
+
+| Activity | Definition |
+| --- | --- |
+| [**Read table**](/docs/tables#read-table) | Read the contents of a specified table |
+| [**For each row**](/docs/tables#for-each-row) | Apply a set of actions to each row in the specified table |
+| [**Remove empty rows**](/docs/tables#remove-empty-rows) | Removes all empty rows from a table |
+| [**Save table**](/docs/tables#save-table) | Save the table in Excel, Google Sheets or CSV format |
+
+## Google Sheets
+
+| Activity | Definition |
+| --- | --- |
+| [**Get values**](/docs/google-sheets#get-values) | Reads a content of a Google Sheets table in a specified range |
+| [**Update values**](/docs/google-sheets#update-values) | Changes a content of cells within the specified range |
+| [**Append values**](/docs/google-sheets#append-values) | Adds values to the first completely empty line in a table |
+
+# MS Office
+
+## MS Word
+
+| Activity | Definition |
+| --- | --- |
+| [**Read Word file**](/docs/ms-word#read-word-file) | Reads the content of a Word file |
+| [**Write Word file**](/docs/ms-word#write-word-file) | Overwrites the content of a Word document |
+| [**Append to Word**](/docs/ms-word#append-to-word) | Appends data to a Word document |
+| [**Replace Words in Template**](/docs/ms-word#replace-words-in-template) | Replace words in a Word file with the desired values |
+
+## MS Excel
+
+| Activity | Definition |
+| --- | --- |
+| [**Read Excel File**](/docs/ms-excel#read-excel-file) | Read the contents of an Excel table |
+| [**Write Excel File**](/docs/ms-excel#write-excel-file) | Write specified values to a specified range in an Excel file |
+| [**Append row to Excel file**](/docs/ms-excel#append-row-to-excel-file) | Add a row to the end of an Excel sheet |
+| [**Insert/Delete Rows**](/docs/ms-excel#insertdelete-rows) | Insert or delete a row in an existing Excel document |
+| [**Read Excel Range**](/docs/ms-excel#read-excel-range) | ‌Get the value of the range from the Excel file |
+| [**Write Excel Range**](/docs/ms-excel#write-excel-range) | Write specified values to a specified range in an Excel file |
+| [**Read Excel Row**](/docs/ms-excel#read-excel-row) | Get a particular row value from the Excel file |
+| [**Update Excel Row**](/docs/ms-excel#update-excel-row) | Updates particular row values in the Excel file |
+| [**Read Excel Cell**](/docs/ms-excel#read-excel-cell) | Reads the value of a specified cell in an Excel document |
+| [**Update Excel Cell**](/docs/ms-excel#update-excel-cell) | Updates the content of specified cells in an Excel document |
+| [**Execute Macro**](/docs/ms-excel#execute-macro) | Execute a .vbs-macro in the selected Excel file |
+| [**Insert/Delete Columns**](/docs/ms-excel#insertdelete-columns) | Insert or delete a column in an existing Excel document |
+| [**Read Column**](/docs/ms-excel#read-column) | Read data from a selected column in an Excel document and save it to a variable |
+| [**Append Column**](/docs/ms-excel#append-column) | Insert a column at the end of the selected Excel document |
+| [**Update Column**](/docs/ms-excel#update-column) | Overwrite data in a certain column of an Excel document |
+| [**Sort Range**](/docs/ms-excel#sort-range) | Sort the range of data in the Excel file by column |
+| [**AutoFill Formula**](/docs/ms-excel#autofill-formula) | Automatically extend a formula across a range of cells |
+
+## MS Outlook
+
+| Activity | Definition |
+| --- | --- |
+| [**Read Emails**](/docs/ms-outlook#read-emails) | Read emails received in the Outlook mail service |
+| [**Send email**](/docs/ms-outlook#send-email) | Send an email using the Outlook mail service |
+
+## Office 365
+
+| Activity | Definition |
+| --- | --- |
+| [**Read emails**](/docs/office-365#read-emails) | Read emails stored in your Microsoft account |
+| [**Send email**](/docs/office-365#send-email) | Sends an email using a Microsoft account |
+
+# Email
+
+## Outlook
+
+| Activity | Definition |
+| --- | --- |
+| [**Read Emails**](/docs/ms-outlook#read-emails) | Read emails received in the Outlook mail service |
+| [**Send email**](/docs/ms-outlook#send-email) | Send an email using the Outlook mail service |
+
+This activities copy the functionality of the [same activities](/docs/ms-outlook)
+ in the "MS Office" section.
+
+## Office 365
+
+| Activity | Definition |
+| --- | --- |
+| [**Read emails**](/docs/office-365#read-emails) | Read emails stored in your Microsoft account |
+| [**Send email**](/docs/office-365#send-email) | Sends an email using a Microsoft account |
+
+This activities copy the functionality of the [same activities](/docs/office-365)
+ in the "MS Office" section.
+
+## Others
+
+| Activity | Definition |
+| --- | --- |
+| [**For each email**](/docs/others-1#for-each-email) | Work with one email at a time |
+| [**Read emails**](/docs/others-1#read-emails) | Read emails from a specified date |
+| [**Send email**](/docs/others-1#send-email) | Sends a message via an email |
+| [**Email trigger**](/docs/others-1#email-trigger) | Trigger other activities when an email appears |
+
+# Document Processing
+
+## IntelliDocs
+
+| Activity | Definition |
+| --- | --- |
+| [**Extract Document Data**](/docs/intellidocs-extract-document-data) | Apply Intelligent Document Processing (IDP) in your workflow with just a few clicks |
+
+## OCR Engines
+
+| Activity | Definition |
+| --- | --- |
+| [**Microsoft Cloud OCR**](/docs/ocr-engines#microsoft-cloud-ocr) | Recognizes an image text using Microsoft OCR technology |
+| [**Google Cloud OCR**](/docs/ocr-engines#google-cloud-ocr) | Recognizes an image text using Google OCR technology |
+| [**ABBYY Cloud OCR**](/docs/ocr-engines#abbyy-cloud-ocr) | Recognizes an image text using the ABBYY Cloud OCR technology |
+| [**Recognition template**](/docs/ocr-engines#recognition-template) | Specify a document that will be used as the recognition template |
+
+## Data Extraction
+
+| Activity | Definition |
+| --- | --- |
+| [**Klippa OCR**](/docs/data-extraction#klippa-ocr) | Recognize text using the Klippa OCR service |
+| [**Nanonets OCR**](/docs/data-extraction#nanonets-ocr) | Recognize the text using the Nanonets OCR service |
+| [**Microsoft Form Recognizer OCR**](/docs/data-extraction#microsoft-form-recognizer-ocr) | Recognize text using the Microsoft Form Recognizer service |
+| [**Amazon Textract OCR**](/docs/data-extraction#amazon-textract-ocr) | Recognize text from image using the Amazon Textract OCR service |
+| [**CaptureFast OCR**](/docs/data-extraction#capturefast-ocr) | Recognize text from image using the CaptureFast OCR service |
+
+## PDF
+
+| Activity | Definition |
+| --- | --- |
+| [**Read Text**](/docs/pdf#read-text) | Extract the text layer from a PDF file |
+| [**Convert to Image**](/docs/pdf#convert-to-image) | Convert a PDF file to an image |
+| [**Extract Page Range**](/docs/pdf#extract-page-range) | Extract selected pages from the PDF file to a new PDF file |
+| [**Get PDF Page Count**](/docs/pdf#get-pdf-page-count) | Count the number of pages in a PDF file |
+| [**Combine to PDF**](/docs/pdf#combine-to-pdf) | Combine multiple files into a single multi-page PDF |
+
+# Citrix & RDP
+
+## Surface Automation
+
+| Activity | Definition |
+| --- | --- |
+| [**Click on image**](/docs/machine-vision#click-on-image) | Find an image on the screen and click on it |
+| [**Find image**](/docs/machine-vision#find-image) | Find an image on the screen and get its coordinate |
+| [**Take a screenshot**](/docs/machine-vision#take-a-screenshot) | Capture the image of the entire screen |
+| [**Wait for image**](/docs/machine-vision#wait-for-image) | Define a time limit to wait for a specific image to appear on the screen |
+
+This activities copy the functionality of the [same activities](/docs/machine-vision#wait-for-image)
+ in the "GUI Automation" section.
+
+## Terminals
+
+| Activity | Definition |
+| --- | --- |
+| [**Input from keyboard**](/docs/terminals#input-from-keyboard) | Input text to a specified field or terminal area |
+| [**Read text from area**](/docs/terminals#read-text-from-area) | Reads the content of a specified terminal area |
+| [**Wait for text**](/docs/terminals#wait-for-text) | Waits for a text in a specified terminal area |
+
+# Connectors
+
+## Google Drive
+
+| Activity | Definition |
+| --- | --- |
+| [**Download File**](/docs/google-drive#download-file) | Download a file from your Google Drive |
+| [**Upload file**](/docs/google-drive#upload-file) | Upload a file from your computer to your Google Drive |
+| [**Create directory**](/docs/google-drive#create-directory) | Create a new folder in your Google Drive |
+
